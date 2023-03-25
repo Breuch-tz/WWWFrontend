@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Ovo&display=swap");
+
+:root {
+  --one: #393e46;
+  --two: #6d9886;
+  --three: #f2e7d5;
+  --four: #f7f7f7;
+  --accent: #c69749;
+
+  --one-opacity: rgb(57, 62, 70, 0.9);
+  --two-opacity: rgb(109, 152, 134, 0.9);
+  --three-opacity: rgb(242, 231, 213, 0.9);
+  --four-opacity: rgb(247, 247, 247, 0.9);
+
+  --one-opacity-X: rgb(57, 62, 70, 0.6);
+  --two-opacity-X: rgb(109, 152, 134, 0.6);
+  --three-opacity-X: rgb(242, 231, 213, 0.6);
+  --four-opacity-X: rgb(247, 247, 247, 0.6);
+
+  --accent-opacity: rgb(198, 151, 73, 0.5);
+}
+* {
+  margin: 0;
+  padding: 0;
+  // box-sizing: border-box;
+  font-family: "Ovo", serif;
+  font-size: 20px;
+}
+body {
+  background-color: var(--four);
+}
+
+// start region scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(95, 95, 95, 0.4);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(95, 95, 95, 0.7);
+}
+// end region scrollbar
+.standart-button {
+  color: black;
+  font-size: small;
+  background-color: var(--three);
+}
+.standart-button:hover {
+  transition: 0.3s;
+  background-color: var(--three-opacity-X);
+}
