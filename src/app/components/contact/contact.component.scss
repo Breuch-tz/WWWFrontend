@@ -1,0 +1,32 @@
+.validateStyleInvalid {
+  border-color: red;
+}
+.validateStyleInvalidCB {
+  color: red;
+}
+
+.validateStyleFormError {
+  opacity: 0;
+}
+
+::ng-deep .custom-snackbar {
+  position: fixed !important;
+  text-justify: center !important;
+  // max-width: 80vw !important;
+  margin: auto !important;
+  margin-bottom: 15px !important;
+  border-radius: 10px !important;
+  align-items: center !important;
+  text-align: center !important;
+  border: 0px !important;
+  div {
+    border: 0.5px solid rgb(0, 0, 0) !important;
+    background-color: rgb(198, 151, 73, 0.2) !important;
+    border-radius: 5px !important;
+    padding: 0px !important;
+    div{
+     border: 0px !important;
+    margin: auto !important;
+   }
+  }
+}

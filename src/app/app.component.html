@@ -1,0 +1,148 @@
+<nav class="bg-white px-2 py-2.5 fixed w-full z-20 top-0 left-0 border-b">
+  <div class="container flex flex-wrap items-center justify-between mx-auto">
+    <a routerLink="/home">
+      <img
+        src="../assets/app/Logo neu.png"
+        class="logo h-6 mr-1 sm:h-9 xl:mr-3"
+        alt="Puls der Zeit"
+      />
+    </a>
+    <div class="flex md:order-2">
+      <button
+        type="button"
+        class="standart-button contact-button xl:px-6 px-1 py-3 mr-1 font-medium leading-snug uppercase rounded shadow-md ease-in-out"
+        routerLink="/contact"
+        routerLinkActive="routeIsActive"
+      >
+        Zum Kontakt
+      </button>
+      <button
+        data-collapse-toggle="navbar-sticky"
+        type="button"
+        class="inline-flex items-center p-2 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
+        aria-controls="navbar-sticky"
+        aria-expanded="false"
+        (click)="sidenavToggle()"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <div
+      style="transition: 0.3s"
+      [hidden]="SidenavToggleStatus"
+      class="items-center mr-1.5 justify-between w-full md:flex md:w-auto md:order-1"
+      id="navbar-sticky"
+    >
+      <ul
+        class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:font-medium md:border-0 md:bg-white"
+      >
+        <li>
+          <a
+            routerLink="/home"
+            routerLinkActive="routeIsActive"
+            class="block py-2 pl-3 pr-4 rounded md:p-0"
+            aria-current="page"
+            >Home</a
+          >
+        </li>
+        <mat-divider *ngIf="!Mobilesize"></mat-divider>
+        <li>
+          <a
+            routerLink="/about"
+            routerLinkActive="routeIsActive"
+            class="block py-2 pl-3 pr-4 rounded md:p-0"
+            >About</a
+          >
+        </li>
+        <mat-divider *ngIf="!Mobilesize"></mat-divider>
+
+        <li>
+          <a
+            routerLink="/products"
+            routerLinkActive="routeIsActive"
+            style="cursor: pointer; user-select: none"
+            class="block py-2 pl-3 pr-4 rounded md:p-0"
+            >Products
+          </a>
+        </li>
+
+        <mat-divider *ngIf="!Mobilesize"></mat-divider>
+        <li>
+          <a
+            routerLink="/contact"
+            routerLinkActive="routeIsActive"
+            class="block py-2 pl-3 pr-4 rounded md:p-0"
+            >Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<body (click)="sidenavClose()">
+  <router-outlet (activate)="onActivate()"></router-outlet>
+</body>
+
+<footer
+  class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 flex flex-col"
+>
+  <div
+    class="mb-6 contentblock-one container mx-auto flex flex-col text-center items-center"
+  >
+    <h2 class="text-1xl font-bold sm:text-1xl">Öffnungszeiten</h2>
+    <div class="grid grid-rows-6 grid-flow-col gap-1">
+      <div>Montag & Dienstag</div>
+      <div><b>Mittwoch</b></div>
+      <div><b>Donnerstag</b></div>
+      <div><b>Freitag</b></div>
+      <div><b>Samstag</b></div>
+      <div>Sonnatg</div>
+      <div>Geschlossen</div>
+      <div>10:00-13:00 15:00-18:00</div>
+      <div>10:00-13:00 15:00-18:00</div>
+      <div>10:00-13:00 15:00-18:00</div>
+      <div>10:00-13:00</div>
+      <div>Geschlossen</div>
+    </div>
+  </div>
+
+  <div
+    class="mb-6 contentblock-one container mx-auto flex flex-col text-center items-center"
+  >
+    <p>Emsdettener Straße 2, 48268 Greven - 02571 / 27 12 -info@breuch.de</p>
+  </div>
+
+  <div class="mx-auto flex flex-col">
+    <span class="text-sm sm:text-left"
+      >©2023 <a routerLink="/home" class="hover:underline">Puls der Zeit</a>.
+      All Rights Reserved.
+    </span>
+    <br />
+    <ul class="flex flex-col text-center items-center mt-3 text-sm sm:mt-0">
+      <li>
+        <a
+          routerLink="/contact"
+          routerLinkActive="routeIsActive"
+          class="text-sm mr-4 hover:underline md:mr-6"
+          >Contact</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/impressum"
+          routerLinkActive="routeIsActive"
+          class="text-sm mr-4 hover:underline md:mr-6"
+          >Impressum</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/datenschutzerklaerung"
+          routerLinkActive="routeIsActive"
+          class="text-sm mr-4 hover:underline"
+          >Datenschutzerklärung
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
