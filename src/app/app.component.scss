@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+.logo {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 60px;
+  margin-left: 2.5rem;
+}
+
+div ul li:hover {
+  a {
+    color: var(--one-opacity-X);
+  }
+  .routeIsActive {
+    color: var(--accent);
+  }
+}
+
+.routeIsActive {
+  color: var(--accent);
+}
+
+@media only screen and (max-width: 327px) {
+  .contact-button {
+    display: none;
+  }
+}
