@@ -65,7 +65,15 @@
             >Products
           </a>
         </li>
-
+        <mat-divider *ngIf="!Mobilesize"></mat-divider>
+        <li>
+          <a
+            routerLink="/blog"
+            routerLinkActive="routeIsActive"
+            class="block py-2 pl-3 pr-4 rounded md:p-0"
+            >Blog
+          </a>
+        </li>
         <mat-divider *ngIf="!Mobilesize"></mat-divider>
         <li>
           <a
@@ -75,12 +83,22 @@
             >Contact
           </a>
         </li>
+        <mat-divider *ngIf="!Mobilesize"></mat-divider>
+        <li>
+          <a
+            routerLink="/dashboard"
+            routerLinkActive="routeIsActive"
+            class="block py-2 pl-3 pr-4 rounded md:p-0"
+            >Dash
+          </a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
+
 <body (click)="sidenavClose()">
-  <router-outlet (activate)="onActivate()"></router-outlet>
+  <router-outlet (activate)="onActivate()"> </router-outlet>
 </body>
 
 <footer
@@ -96,7 +114,7 @@
       <div><b>Donnerstag</b></div>
       <div><b>Freitag</b></div>
       <div><b>Samstag</b></div>
-      <div>Sonnatg</div>
+      <div>Sonntag</div>
       <div>Geschlossen</div>
       <div>10:00-13:00 15:00-18:00</div>
       <div>10:00-13:00 15:00-18:00</div>

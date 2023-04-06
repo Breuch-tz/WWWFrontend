@@ -17,6 +17,10 @@ import { MatDividerModule } from '@angular/material/divider';
 import { DatenschutzComponent } from './components/datenschutz/datenschutz.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatButtonModule } from '@angular/material/button';
+import { BlogComponent } from './components/blog/blog.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProductComponent,
     DatenschutzComponent,
     ImpressumComponent,
+    BlogComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +43,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule,
     MatSnackBarModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTooltipModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

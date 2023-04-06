@@ -5,18 +5,21 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProductComponent } from './components/product/product.component';
-
 import { ImpressumComponent } from './components/impressum/impressum.component';
 import { DatenschutzComponent } from './components/datenschutz/datenschutz.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },
   { path: 'products', component: ProductComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'blog', component: BlogComponent },
   { path: 'impressum', component: ImpressumComponent },
   { path: 'datenschutzerklaerung', component: DatenschutzComponent },
+  { path: 'dashboard', component: DashboardComponent },
 ];
 
 @NgModule({

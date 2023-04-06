@@ -10,7 +10,7 @@ export class AppComponent {
   public SidenavToggleStatus: boolean = true;
   public Mobilesize: boolean = true;
 
-  public ScreenWidth!: Number;
+  public ScreenWidth!: number;
 
   constructor(public meta: Meta) {
     this.onResize();

@@ -1,7 +1,7 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { EmailService } from 'src/app/services/email.service';
+import { Component } from '@angular/core';
 import { EmailValidatorService } from '../../services/email-validator.service';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
+import { PostService } from 'src/app/mongo/post/post.service';
 
 @Component({
   selector: 'app-contact',
@@ -10,12 +10,13 @@ import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 })
 export class ContactComponent {
   constructor(
-    private emailService: EmailService,
+    private post: PostService,
     public emailValidatorService: EmailValidatorService,
     public snackBar: MatSnackBar
   ) {}
 
   ngOnInit() {}
+
   openSnackBar(message: string) {
     let config = new MatSnackBarConfig();
     config.panelClass = ['custom-snackbar'];
@@ -36,10 +37,12 @@ export class ContactComponent {
     },
     resetForm: any
   ) {
+    emailForm.eEmailTo = 'breuch.tizian@gmail.com';
+    emailForm.eCompany = 'Puls der Zeit - Juwelier Breuch';
     if (!this.emailValidatorService.validateForm(emailForm)) {
       return;
     }
-    this.emailService.onEmailCreate(emailForm).subscribe();
+    this.post.onEmailCreate(emailForm).subscribe();
     resetForm.resetForm();
     this.openSnackBar('Email gesendet');
   }
