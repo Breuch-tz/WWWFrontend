@@ -35,10 +35,10 @@ export class AppComponent {
   @HostListener('window:resize', ['$event'])
   public onResize(event?: undefined) {
     this.ScreenWidth = window.innerWidth;
-    if (this.ScreenWidth <= 767) {
+    if (this.ScreenWidth <= 1030) {
       this.Mobilesize = false;
     }
-    if (this.ScreenWidth > 767) {
+    if (this.ScreenWidth > 1030) {
       this.Mobilesize = true;
     }
   }

@@ -42,7 +42,7 @@ export class ContactComponent {
     if (!this.emailValidatorService.validateForm(emailForm)) {
       return;
     }
-    this.post.onEmailCreate(emailForm).subscribe();
+    this.post.createEmail(emailForm).subscribe();
     resetForm.resetForm();
     this.openSnackBar('Email gesendet');
   }

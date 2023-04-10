@@ -14,22 +14,26 @@ export class PostService {
     return this.refreshSubject;
   }
 
-  public onPostCreate(postForm: {
+  public createPost(postForm: {
+    pId: String;
     pHeader: String;
     pSubheader: String;
     pMessage: String;
     pDate: String;
   }): Observable<IPostModel> {
+    console.log(postForm);
+    const pId = postForm.pId;
     return this.http
-      .post<any>('http://localhost:3000/post/list', postForm)
+      .post<any>(`http://localhost:3000/post/list/${postForm.pId}`, postForm)
       .pipe(
-        tap(() => {
+        tap((res) => {
+          console.log(res);
           this.refreshList.next();
         })
       );
   }
 
-  public onEmailCreate(emailForm: {
+  public createEmail(emailForm: {
     eName: String;
     eEmail: String;
     eMessage: String;

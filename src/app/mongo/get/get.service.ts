@@ -7,7 +7,9 @@ import { Observable, tap } from 'rxjs';
 })
 export class GetService {
   public list = Array();
+
   constructor(private http: HttpClient) {}
+
   public getData(): Observable<IUserModel> {
     return this.http
       .get<IUserModel>('http://localhost:3000/user/get/list')
