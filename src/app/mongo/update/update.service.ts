@@ -3,9 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, Subject, tap } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
-export class PostService {
+export class UpdateService {
+
   private refreshSubject = new Subject<void>();
 
   constructor(private http: HttpClient) {}
@@ -21,28 +22,16 @@ export class PostService {
     pMessage: String;
     pDate: String;
   }): Observable<IPostModel> {
-    // console.log(postForm);
     
     return this.http
-      .post<any>('http://localhost:3000/post/list', postForm)
+      .post<any>(`http://localhost:3000/update/list/${postForm.pId}`, postForm)
       .pipe(
         tap((res) => {
-          console.log("post");
+          console.log("update");
           console.log(res);
           this.refreshList.next();
         })
       );
-  }
-
-  public createEmail(emailForm: {
-    eName: String;
-    eEmail: String;
-    eMessage: String;
-    eEmailTo: String;
-    eCompany: String;
-    eCheckbox: Boolean;
-  }): Observable<IEmailModel> {
-    return this.http.post<any>('http://localhost:3000/email/send', emailForm);
   }
 }
 
@@ -51,13 +40,4 @@ export interface IPostModel {
   pSubheader: String;
   pMessage: String;
   pDate: String;
-}
-
-export interface IEmailModel {
-  eName: String;
-  eEmail: String;
-  eMessage: String;
-  eEmailTo: String;
-  eCompany: String;
-  eCheckbox: Boolean;
 }

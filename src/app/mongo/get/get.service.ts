@@ -12,13 +12,14 @@ export class GetService {
 
   public getData(): Observable<IUserModel> {
     return this.http
-      .get<IUserModel>('http://localhost:3000/user/get/list')
+      .get<IUserModel>('http://localhost:3000/get/list')
       .pipe(
         tap((response: any) => {
           this.list = response.reverse();
         })
       );
   }
+  
 }
 
 export interface IUserModel {
