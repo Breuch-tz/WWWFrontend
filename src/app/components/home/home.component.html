@@ -1,18 +1,15 @@
 <div class="title mt-10 text-center pt-24 pb-10 px-6">
   <p class="text-2xl md:text-4xl xl:text-5xl tracking-tight"></p>
 </div>
-<div class="mt-3 mb-3 text-center pt-3 pb-3 px-6">
+<div class="mt-6 mb-6 text-center pt-3 pb-3 px-6">
   <h1 class="notranslate text-5xl md:text-6xl xl:text-7xl tracking-tight">
-    <p class="text-4xl md:text-5xl xl:text-6xl tracking-tight">Puls der Zeit</p>
-    <span class="text-4xl md:text-5xl xl:text-6xl tracking-tight title-heading"
-      >Juwelier Breuch</span
-    >
+    WebBee
   </h1>
 </div>
 
-<div class="contentblock-one container mt-6 mb-8 px-6 mx-auto">
+<div class="contentblock-one container mt-6 mb-6 px-6 mx-auto">
   <section class="text-black-800 text-center">
-    <div class="flex flex-wrap">
+    <div class="flex flex-wrap mb-12">
       <p>
         Spezialist für Trauringe und Revision mechanischer Uhren mit einer
         hauseigenen Uhrmacherwerkstatt.
@@ -26,169 +23,63 @@
         Sollten Sie weitere Fragen haben, können Sie uns gerne kontaktieren!
       </p>
     </div>
-    <br />
-    <br />
     <mat-icon class="arrow-down">arrow_downward</mat-icon>
   </section>
 </div>
 
-<section class="text-black-800 mb-12">
-  <div class="text-center container mx-auto max-w-screen-xl px-4 pt-0">
-    <h2 class="text-2xl font-bold sm:text-3xl">
-      Unsere Leistungen auf einen Blick
-    </h2>
+<div class="text-center image-section container my-12 mt-0 px-6 mx-auto">
+  <section class="text-gray-800">
+    <div class="text-center">
+      <h1 class="mb-0 text-2xl font-bold sm:text-3xl">Über unsere Produkte</h1>
+    </div>
 
-    <div class="grid lg:grid-cols-2 gap-6 pt-20">
+    <div id="trauringe" class="pt-20 flex flex-wrap">
       <div
-        class="mehrErfahrenBox zoom shadow-lg rounded-lg relative overflow-hidden bg-no-repeat bg-cover"
-        style="background-position: 50%; cursor: pointer"
-        data-mdb-ripple="true"
-        data-mdb-ripple-color="dark"
-        routerLink="/about"
-        fragment="goldschmiede"
+        class="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pr-6 lg:mb-0 mb-6"
       >
-        <img
-          src="../../../assets/home/Zeichnung Goldschmiede.jpg"
-          class="w-full transition duration-300 ease-linear align-middle"
-        />
-        <a>
-          <div
-            class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
-            style="background-color: rgba(0, 0, 0, 0.3)"
-          >
-            <div class="flex justify-start items-end h-full">
-              <h5 class="text-lg font-bold text-white m-6">
-                Goldschmiede
-                <p
-                  class="mehrErfahrenText text-blue-400"
-                  style="font-size: medium"
-                >
-                  Mehr erfahren >
-                </p>
-              </h5>
-            </div>
-          </div>
-          <div class="hover-overlay">
+        <div
+          class="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
+          style="background-position: 50%"
+          data-mdb-ripple="true"
+          data-mdb-ripple-color="light"
+        >
+          <img
+            src="./../../../assets/home/zwei-goldene-eheringe.jpg"
+            class="w-full"
+            alt="Trauringe"
+          />
+          <a>
             <div
-              class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"
-              style="background-color: rgba(253, 253, 253, 0.15)"
+              class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+              style="background-color: rgba(251, 251, 251, 0.2)"
             ></div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
 
-      <div
-        class="mehrErfahrenBox uhrmachermeister zoom shadow-lg rounded-lg relative overflow-hidden bg-no-repeat bg-cover"
-        style="background-position: 50%; cursor: pointer"
-        data-mdb-ripple="true"
-        data-mdb-ripple-color="dark"
-        routerLink="/about"
-        fragment="uhrmachermeister"
-      >
-        <img
-          src="../../../assets/home/kette_schnecke.jpg"
-          class="w-full transition duration-300 ease-linear align-middle"
-        />
-        <a>
-          <div
-            class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
-            style="background-color: rgba(0, 0, 0, 0.3)"
-          >
-            <div class="flex justify-start items-end h-full">
-              <h5 class="text-lg font-bold text-white m-6">
-                Uhrmachermeister
-                <p
-                  class="mehrErfahrenText text-blue-400"
-                  style="font-size: medium"
-                >
-                  Mehr erfahren >
-                </p>
-              </h5>
-            </div>
-          </div>
-          <div class="hover-overlay">
-            <div
-              class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"
-              style="background-color: rgba(253, 253, 253, 0.15)"
-            ></div>
-          </div>
-        </a>
+      <div class="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pl-6">
+        <h3 class="text-2xl font-bold">Trauringe</h3>
+        <p class="text-gray-500 mb-4">
+          Das Eheversprechen ist das schönste Versprechen, das wir einer Person
+          geben können und Trauringe sind das Zeugnis dafür. Viele Paare möchten
+          daher ganz besondere Ringe haben, die ihre Liebe widerspiegeln. Bei
+          uns finden Sie genau solche Eheringe. Wir präsentieren Ihnen gerne
+          unser breites Sortiment an Trauringen von beliebten und bewährten
+          Marken wie Kühnel, Gerstner oder Wörner. <br /><br />
+          Dank unserer langjährigen Zusammenarbeit mit einem Partnerbetrieb
+          können wir auch Steinfassungen vornehmen. Unabhängig davon, ob Sie
+          eine außergewöhnliche, unkonventionelle Form oder eher klassische
+          Modelle bevorzugen, erfüllen wir genau Ihre Wünsche mit unserem
+          Sortiment an maßgefertigten Ringen.
+        </p>
       </div>
-      <div
-        class="mehrErfahrenBox zoom shadow-lg rounded-lg relative overflow-hidden bg-no-repeat bg-cover"
-        style="background-position: 50%; cursor: pointer"
-        data-mdb-ripple="true"
-        data-mdb-ripple-color="dark"
-        routerLink="/products"
-        fragment="trauringe"
-      >
-        <img
-          src="../../../assets/home/trauringe.jpg"
-          class="w-full transition duration-300 ease-linear align-middle"
-        />
-        <a>
-          <div
-            class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
-            style="background-color: rgba(0, 0, 0, 0.3)"
-          >
-            <div class="flex justify-start items-end h-full">
-              <h5 class="text-lg font-bold text-white m-6">
-                Trauringe
-                <p
-                  class="mehrErfahrenText text-blue-400"
-                  style="font-size: medium"
-                >
-                  Mehr erfahren >
-                </p>
-              </h5>
-            </div>
-          </div>
-          <div class="hover-overlay">
-            <div
-              class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"
-              style="background-color: rgba(253, 253, 253, 0.15)"
-            ></div>
-          </div>
-        </a>
-      </div>
-
-      <div
-        class="mehrErfahrenBox zoom shadow-lg rounded-lg relative overflow-hidden bg-no-repeat bg-cover"
-        style="background-position: 50%; cursor: pointer"
-        data-mdb-ripple="true"
-        data-mdb-ripple-color="dark"
-        routerLink="/products"
-        fragment="uhren"
-      >
-        <img
-          src="../../../assets/home/rolex.jpg"
-          class="w-full transition duration-300 ease-linear align-middle"
-        />
-        <a>
-          <div
-            class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
-            style="background-color: rgba(0, 0, 0, 0.3)"
-          >
-            <div class="flex justify-start items-end h-full">
-              <h5 class="text-lg font-bold text-white m-6">
-                Uhren & Schmuck
-                <p
-                  class="mehrErfahrenText text-blue-400"
-                  style="font-size: medium"
-                >
-                  Mehr erfahren >
-                </p>
-              </h5>
-            </div>
-          </div>
-          <div class="hover-overlay">
-            <div
-              class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"
-              style="background-color: rgba(253, 253, 253, 0.15)"
-            ></div>
-          </div>
-        </a>
+      <div>
+        <p class="font-bold text-black-800 mt-8">
+          Individualität, exklusiver Service, guter Preis, einmalige
+          anfertigung, Recyclinggold oder vom Kunden bereitgestelltes Gold,
+          Fair-Trade-Zertifikat.
+        </p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>

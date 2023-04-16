@@ -19,8 +19,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
-import { BlogComponent } from './components/blog/blog.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -31,8 +29,6 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     ProductComponent,
     DatenschutzComponent,
     ImpressumComponent,
-    BlogComponent,
-    DashboardComponent,
   ],
   imports: [
     BrowserModule,
