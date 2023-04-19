@@ -44,3 +44,17 @@
 //   max-height: 350px;
 //   max-width: auto;
 // }
+
+.picture {
+  background-image: url(./../../../assets/about/clock.jpg);
+}
+
+.ngStyle1 {
+  opacity: 1;
+  transition: 0.5s;
+}
+.ngStyle2 {
+  opacity: 0.3;
+  transition: 1s;
+  transform: translate(0px, 50px);
+}
