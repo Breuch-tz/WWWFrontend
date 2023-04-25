@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { GalleryItem, ImageItem } from 'ng-gallery';
 
 @Component({
   selector: 'app-home',
@@ -9,10 +10,21 @@ export class HomeComponent {
   public ngStyle1: String = 'ngStyleBefore';
   public ngStyle2: String = 'ngStyleBefore';
 
+  public images!: GalleryItem[];
+
   constructor(private elementRef: ElementRef) {}
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: any) {
     this.checkElementViewport();
+  }
+
+  ngOnInit() {
+    this.images = [
+      new ImageItem({ src: '../../../assets/home/rolex.jpg', thumb: '../../../assets/home/rolex.jpg' }),
+      new ImageItem({ src: '../../../assets/home/Trauring klassisch.jpg', thumb: '../../../assets/home/Trauring klassisch.jpg' }),
+      new ImageItem({ src: '../../../assets/home/Zeichnung Goldschmiede.jpg', thumb: '../../../assets/home/Zeichnung Goldschmiede.jpg' }),
+      new ImageItem({ src: '../../../assets/home/zwei-goldene-eheringe.jpg', thumb: '../../../assets/home/zwei-goldene-eheringe.jpg' }),
+    ];
   }
 
   private checkElementViewport() {

@@ -1,10 +1,28 @@
-<div class="pt-24"></div>
-
 <h1
-  class="text-center notranslate text-5xl md:text-6xl xl:text-7xl tracking-tight"
+  class="mt-28 text-center notranslate text-5xl md:text-6xl xl:text-7xl tracking-tight"
 >
   WebBee
 </h1>
+
+<div class="py-10">
+  <gallery
+    class="ng-gallery"
+    [nav]="false"
+    [dots]="true"
+    [dotsSize]="10"
+    thumbMode="free"
+    dotsPosition="top"
+    [playerInterval]="4000"
+    [autoPlay]="true"
+    gestures="true"
+    [counter]="false"
+    [loop]="true"
+    loadingStrategy="preload"
+    imageSize="contain"
+    [items]="images"
+  ></gallery>
+</div>
+
 
 <div class="contentblock-one container mt-6 mb-6 px-6 mx-auto">
   <section class="text-black-800 text-center">
