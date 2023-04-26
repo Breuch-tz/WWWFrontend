@@ -15,3 +15,46 @@
   background-repeat: no-repeat;
   background-position: 100% 31%;
 }
+
+.ng-gallery {
+  background-color: rgb(247, 247, 247) !important;
+  height: 50vh !important;
+}
+
+.ngStyleAfter {
+  opacity: 1;
+  transition: 1.4s;
+}
+
+.ngStyleBefore {
+  opacity: 0;
+  transition: 1s;
+  transform: translate(0px, 80px);
+}
+
+.svg-image {
+  p {
+    box-shadow: 4px 6px 12px -10px rgb(17, 17, 17);
+    border-radius: 6px;
+    padding: 4px;
+    transition: 1s;
+  }
+
+  span {
+    font-size: min(50vw, 360px);
+    transition: 1s;
+    box-shadow: 4px 6px 20px -10px rgb(17, 17, 17);
+    border-radius: 200px;
+    color: #000000e1;
+    cursor: default;
+    user-select: none;
+  }
+  span:hover {
+    box-shadow: 4px 6px 25px -5px rgb(17, 17, 17);
+    transition: 1s;
+  }
+  span:hover ~ p {
+    box-shadow: 4px 6px 20px -10px rgb(17, 17, 17);
+    transition: 1s;
+  }
+}

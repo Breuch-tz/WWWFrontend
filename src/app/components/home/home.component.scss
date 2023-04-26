@@ -1,35 +1,36 @@
-// .title-heading {
-//   border-top: 1px solid black;
-// }
-
-// @media only screen and (max-width: 576px) {
-//   .title-heading {
-//     border-top: none;
-//   }
-// }
-
-// .title {
-//   height: 250px;
-//   background-image: url(./../../../assets/home/zwei-goldene-eheringe.jpg);
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-position: 50% 56%;
-// }
-
-.ngStyleAfter {
-  opacity: 1;
-  transition: 1.4s;
+.svg-image {
+  span {
+    font-size: 90px;
+    transition: 0.5s;
+    box-shadow: 4px 6px 20px -10px rgb(17, 17, 17);
+    border-radius: 200px;
+    color: #000000e1;
+    cursor: default;
+    user-select: none;
+  }
+  span:hover {
+    box-shadow: 4px 6px 25px -5px rgb(17, 17, 17);
+    transition: 0.5s;
+  }
 }
 
-.ngStyleBefore {
-  opacity: 0;
+.image-banner {
   transition: 1s;
-  transform: translate(0px, 80px);
+  p {
+    transition: 1s;
+  }
+}
+.image-banner:hover {
+  .image-banner-btn {
+    transition: 0.3s;
+    border: solid 1px orange;
+    font-size: 115%;
+    backface-visibility: hidden;
+  }
 }
 
-.ng-gallery {
-  background-color: rgb(247, 247, 247) !important;
-  height: 50vh !important;
- 
+.image-banner-btn {
+  backface-visibility: hidden;
+  background-color: rgb(247, 247, 247, 0.8);
+  transition: 0.3s;
 }
-

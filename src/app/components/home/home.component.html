@@ -1,113 +1,149 @@
-<h1
-  class="mt-28 text-center notranslate text-5xl md:text-6xl xl:text-7xl tracking-tight"
->
-  WebBee
-</h1>
-
-<div class="py-10">
-  <gallery
-    class="ng-gallery"
-    [nav]="false"
-    [dots]="true"
-    [dotsSize]="10"
-    thumbMode="free"
-    dotsPosition="top"
-    [playerInterval]="4000"
-    [autoPlay]="true"
-    gestures="true"
-    [counter]="false"
-    [loop]="true"
-    loadingStrategy="preload"
-    imageSize="contain"
-    [items]="images"
-  ></gallery>
-</div>
-
-
-<div class="contentblock-one container mt-6 mb-6 px-6 mx-auto">
-  <section class="text-black-800 text-center">
-    <div class="flex flex-wrap mb-12">
-      <p>
-        Spezialist für Trauringe und Revision mechanischer Uhren mit einer
-        hauseigenen Uhrmacherwerkstatt.
-        <br />
-        <br />
-        Besuchen Sie unser Ladengeschäft in Greven, wenn Sie auf der Suche nach
-        einem Top-Uhrmacher, Juwelier oder hochwertigen Trauringen mit
-        exzellenter Beratung und einem fairen Preis-Leistungs-Verhältnis sind!
-        <br />
-        <br />
-        Sollten Sie weitere Fragen haben, können Sie uns gerne kontaktieren!
-      </p>
+<div class="w-full mt-12 flex">
+  <section
+    class="w-full text-gray-800 text-center lg:text-left background-radial-gradient"
+  >
+    <div
+      class="relative overflow-hidden bg-no-repeat bg-cover"
+      style="
+        background-position: 50%;
+        background-image: url('https://mdbootstrap.com/img/new/standard/nature/071.jpg');
+        height: 500px;
+      "
+    >
+      <div
+        class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+        style="background-color: rgba(0, 0, 0, 0.75)"
+      >
+        <div class="flex justify-center items-center h-full">
+          <div
+            class="text-center text-white px-6 py-6 md:py-0 md:px-12 max-w-[800px]"
+          >
+            <h2
+              class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight leading-tight mb-2"
+            >
+              Are you ready
+            </h2>
+            <p class="mb-2">for an adventure</p>
+            <p class="text-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              officia consequatur adipisci tenetur repudiandae rerum quos.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <mat-icon class="arrow-down">arrow_downward</mat-icon>
   </section>
 </div>
 
-<div class="text-center image-section container my-12 mt-0 px-6 mx-auto">
-  <section class="text-gray-800 pl-8 pr-8">
-    <div class="text-center">
-      <h1 class="mb-0 text-2xl font-bold sm:text-3xl">Ihre Website</h1>
+<h1
+  class="mt-12 mb-6 text-center notranslate text-4xl md:text-5xl xl:text-6xl tracking-tight"
+>
+  Ihr Webdesigner
+</h1>
+<mat-divider style="display: flex; margin: auto" class="w-1/2"></mat-divider>
+
+<div class="container my-6 mt-8 px-6 mx-auto">
+  <section class="text-gray-800 text-center">
+    <div class="flex justify-center">
+      <div class="text-center max-w-[700px]">
+        <!-- <h2 class="text-3xl font-bold mb-6 text-center">Warum WebTree ?</h2> -->
+        <p class="text-gray-500 mb-12">
+          Minus fuga aliquid vero facere ducimus quos, quisquam nemo? Molestias
+          ullam provident vitae error aliquam dolorum temporibus? Doloremque,
+          quasi
+        </p>
+      </div>
     </div>
 
-    <div
-      [ngClass]="ngStyle1"
-      id="section1"
-      class="mt-8 lg:mt-16 flex flex-wrap justify-around overflow-hidden bg-no-repeat bg-cover ripple shadow rounded-lg"
-    >
-      <div
-        class="justify-center items-center flex flex-col grow-0 shrink-0 basis-auto w-10/12 lg:w-5/12 lg:mb-0"
-      >
+    <div class="grid md:grid-cols-1 lg:grid-cols-3 lg:gap-x-12">
+      <div class="mb-12 lg:mb-0">
         <div
-          class="image relative"
-          style="background-position: 50%"
-          data-mdb-ripple="true"
-          data-mdb-ripple-color="light"
+          class="svg-image container text-center content-center flex flex-col items-center justify-items-center mx-auto mb-4"
         >
-          <img
-            src="./../../../favicon.png"
-            class="w-full"
-            alt="Trauringe"
-            style="max-height: 360px; max-width: auto"
-          />
-
-          <a>
-            <div
-              class="absolute bg-cover ripple shadow-sm rounded-lg rounded-lg top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-              style="
-                justify-content: center;
-                display: flex;
-                align-items: center;
-                transition: 1.2s;
-                background-color: rgb(247, 247, 247, 0.5);
-              "
-            >
-              Wir erzählen was über dieses super tolle bild blah blah blah
-            </div>
-          </a>
+          <span class="p-3 material-symbols-outlined"> verified_user </span>
         </div>
+        <h5 class="text-lg font-bold mb-4">Sicher</h5>
+        <p class="text-gray-500">
+          Eum nostrum fugit numquam, voluptates veniam neque quibusdam ullam
+          aspernatur odio soluta, quisquam dolore animi
+        </p>
       </div>
 
-      <div
-        class="flex flex-col justify-center items-center grow-0 shrink-0 basis-auto w-full lg:w-6/12 mt-3 mb-3"
-      >
-        <h3 class="text-2xl pb-2 font-bold">Trauringe</h3>
+      <div class="svg-image mb-12 lg:mb-0">
         <div
-          class="flex flex-col-reverse sm:flex-col md:flex-col lg:flex-col xl:flex-col 2xl:flex-col"
+          class="container text-center content-center flex flex-col items-center justify-items-center mx-auto mb-4"
         >
-          <p class="text-gray-500 mb-2">
-            Das Eheversprechen ist das schönste Versprechen, das wir einer
-            Person geben können und Trauringe sind das Zeugnis dafür. Viele
-            Paare möchten daher ganz besondere Ringe haben, die ihre Liebe
-            widerspiegeln. Bei uns finden Sie genau solche Eheringe. Wir
-            präsentieren Ihnen gerne unser breites Sortiment an Trauringen von
-            beliebten und bewährten Marken wie Kühnel, Gerstner oder Wörner
-          </p>
-          <p class="font-bold text-black-800 mt-2 mb-4">
-            Individualität, exklusiver Service, guter Preis, einmalige
-            anfertigung, Recyclinggold oder vom Kunden bereitgestelltes Gold,
-            Fair-Trade-Zertifikat.
-          </p>
+          <span class="p-3 material-symbols-outlined"> workspace_premium </span>
+        </div>
+        <h5 class="text-lg font-bold mb-4">Professionell</h5>
+        <p class="text-gray-500">
+          Laudantium totam quas cumque pariatur at doloremque hic quos quia
+          eius. Reiciendis optio minus mollitia rerum labore
+        </p>
+      </div>
+
+      <div class="mb-12 md:mb-0">
+        <div
+          class="svg-image container text-center content-center flex flex-col items-center justify-items-center mx-auto mb-4"
+        >
+          <span class="p-3 material-symbols-outlined"> euro_symbol </span>
+        </div>
+        <h5 class="text-lg font-bold mb-4">Preiswert</h5>
+        <p class="text-gray-500">
+          Enim cupiditate, minus nulla dolor cumque iure eveniet facere ullam
+          beatae hic voluptatibus dolores exercitationem
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="my-16 items-center flex">
+  <div
+    class="image-banner h-56 bg-cover top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-100 transition duration-300 ease-in-out"
+    style="
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      background-image: url(../../../assets/about/goldschmied.jpg);
+    "
+  >
+    <button class="image-banner-btn shadow-md p-3 rounded-lg">
+      Zu unseren Leistungen
+    </button>
+  </div>
+</div>
+
+<div class="container px-6 mx-auto">
+  <section class="mb-32 text-gray-800">
+    <div class="items-center text-center">
+      <h5 class="mb-6 text-lg font-bold">Top Quality</h5>
+      <div
+        class="flex items-center text-center gap-y-6 grid md:grid-cols-2 lg:grid-cols-3 md:grid-rows-3 lg:grid-rows-2"
+      >
+        <div>
+          <span class="mr-1 material-symbols-outlined"> check_circle </span>
+          <p class="flex items-center justify-center">Noise cancelling</p>
+        </div>
+        <div>
+          <span class="mr-1 material-symbols-outlined"> check_circle </span>
+          <p class="flex items-center justify-center">Noise cancelling</p>
+        </div>
+        <div>
+          <span class="mr-1 material-symbols-outlined"> check_circle </span>
+          <p class="flex items-center justify-center">Noise cancelling</p>
+        </div>
+        <div>
+          <span class="mr-1 material-symbols-outlined"> check_circle </span>
+          <p class="flex items-center justify-center">Noise cancelling</p>
+        </div>
+        <div>
+          <span class="mr-1 material-symbols-outlined"> check_circle </span>
+          <p class="flex items-center justify-center">Noise cancelling</p>
+        </div>
+        <div>
+          <span class="mr-1 material-symbols-outlined"> check_circle </span>
+          <p class="flex items-center justify-center">Noise cancelling</p>
         </div>
       </div>
     </div>
