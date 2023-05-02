@@ -38,27 +38,25 @@
 <h1
   class="mt-12 mb-6 text-center notranslate text-4xl md:text-5xl xl:text-6xl tracking-tight"
 >
-  Ihr Webdesigner
+  Eine Website für Sie
 </h1>
 <mat-divider style="display: flex; margin: auto" class="w-1/2"></mat-divider>
+<div class="mt-8 flex justify-center">
+  <div class="text-center max-w-[700px]">
+    <!-- <h2 class="text-3xl font-bold mb-6 text-center">Warum WebTree ?</h2> -->
+    <p class="text-gray-500 mb-12">
+      Minus fuga aliquid vero facere ducimus quos, quisquam nemo? Molestias
+      ullam provident vitae error aliquam dolorum temporibus? Doloremque, quasi
+    </p>
+  </div>
+</div>
 
 <div class="container my-6 mt-8 px-6 mx-auto">
   <section class="text-gray-800 text-center">
-    <div class="flex justify-center">
-      <div class="text-center max-w-[700px]">
-        <!-- <h2 class="text-3xl font-bold mb-6 text-center">Warum WebTree ?</h2> -->
-        <p class="text-gray-500 mb-12">
-          Minus fuga aliquid vero facere ducimus quos, quisquam nemo? Molestias
-          ullam provident vitae error aliquam dolorum temporibus? Doloremque,
-          quasi
-        </p>
-      </div>
-    </div>
-
-    <div class="grid md:grid-cols-1 lg:grid-cols-3 lg:gap-x-12">
+    <div class="svg-image grid md:grid-cols-1 lg:grid-cols-3 lg:gap-x-12">
       <div class="mb-12 lg:mb-0">
         <div
-          class="svg-image container text-center content-center flex flex-col items-center justify-items-center mx-auto mb-4"
+          class="container text-center content-center flex flex-col items-center justify-items-center mx-auto mb-4"
         >
           <span class="p-3 material-symbols-outlined"> verified_user </span>
         </div>
@@ -69,7 +67,7 @@
         </p>
       </div>
 
-      <div class="svg-image mb-12 lg:mb-0">
+      <div class="mb-12 lg:mb-0">
         <div
           class="container text-center content-center flex flex-col items-center justify-items-center mx-auto mb-4"
         >
@@ -84,7 +82,7 @@
 
       <div class="mb-12 md:mb-0">
         <div
-          class="svg-image container text-center content-center flex flex-col items-center justify-items-center mx-auto mb-4"
+          class="container text-center content-center flex flex-col items-center justify-items-center mx-auto mb-4"
         >
           <span class="p-3 material-symbols-outlined"> euro_symbol </span>
         </div>
@@ -108,42 +106,46 @@
       background-image: url(../../../assets/about/goldschmied.jpg);
     "
   >
-    <button class="image-banner-btn shadow-md p-3 rounded-lg">
-      Zu unseren Leistungen
+    <button
+      routerLink="/preise"
+      routerLinkActive="routeIsActive"
+      class="image-banner-btn shadow-md p-3 rounded-lg"
+    >
+      Zu unseren Preisen
     </button>
   </div>
 </div>
 
 <div class="container px-6 mx-auto">
-  <section class="mb-32 text-gray-800">
+  <section id="animation" class="animation-section mb-32 text-gray-800">
     <div class="items-center text-center">
-      <h5 class="mb-6 text-lg font-bold">Top Quality</h5>
+      <h5 class="mb-12 text-2xl font-bold">Top Quality</h5>
       <div
-        class="flex items-center text-center gap-y-6 grid md:grid-cols-2 lg:grid-cols-3 md:grid-rows-3 lg:grid-rows-2"
+        class="package-symbol flex items-center text-center gap-y-12 grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 md:grid-rows-3 lg:grid-rows-2"
       >
-        <div>
+        <div [ngClass]="ngStyle1" id="section1">
           <span class="mr-1 material-symbols-outlined"> check_circle </span>
-          <p class="flex items-center justify-center">Noise cancelling</p>
+          <p class="flex items-center justify-center">Noise canceling1</p>
         </div>
-        <div>
+        <div [ngClass]="ngStyle2" id="section2">
           <span class="mr-1 material-symbols-outlined"> check_circle </span>
-          <p class="flex items-center justify-center">Noise cancelling</p>
+          <p class="flex items-center justify-center">Noise cancelling2</p>
         </div>
-        <div>
+        <div [ngClass]="ngStyle3" id="section3">
           <span class="mr-1 material-symbols-outlined"> check_circle </span>
-          <p class="flex items-center justify-center">Noise cancelling</p>
+          <p class="flex items-center justify-center">Noise cancelling3</p>
         </div>
-        <div>
+        <div [ngClass]="ngStyle4" id="section4">
           <span class="mr-1 material-symbols-outlined"> check_circle </span>
-          <p class="flex items-center justify-center">Noise cancelling</p>
+          <p class="flex items-center justify-center">Noise cancelling4</p>
         </div>
-        <div>
+        <div [ngClass]="ngStyle5" id="section5">
           <span class="mr-1 material-symbols-outlined"> check_circle </span>
-          <p class="flex items-center justify-center">Noise cancelling</p>
+          <p class="flex items-center justify-center">Noise cancelling5</p>
         </div>
-        <div>
+        <div [ngClass]="ngStyle6" id="section6">
           <span class="mr-1 material-symbols-outlined"> check_circle </span>
-          <p class="flex items-center justify-center">Noise cancelling</p>
+          <p class="flex items-center justify-center">Noise cancelling6</p>
         </div>
       </div>
     </div>

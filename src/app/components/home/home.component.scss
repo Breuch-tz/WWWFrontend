@@ -2,15 +2,17 @@
   span {
     font-size: 90px;
     transition: 0.5s;
-    box-shadow: 4px 6px 20px -10px rgb(17, 17, 17);
+    box-shadow: 4px 6px 15px -10px rgb(17, 17, 17);
     border-radius: 200px;
     color: #000000e1;
     cursor: default;
     user-select: none;
   }
-  span:hover {
-    box-shadow: 4px 6px 25px -5px rgb(17, 17, 17);
-    transition: 0.5s;
+  div:hover {
+    span {
+      box-shadow: 4px 6px 15px -4px rgb(17, 17, 17);
+      transition: 0.5s;
+    }
   }
 }
 
@@ -33,4 +35,29 @@
   backface-visibility: hidden;
   background-color: rgb(247, 247, 247, 0.8);
   transition: 0.3s;
+}
+
+.package-symbol {
+  div:hover {
+    span {
+      transition: 0.5s;
+      box-shadow: 1px 1px 15px -3px rgb(17, 17, 17);
+    }
+  }
+  span {
+    transition: 0.5s;
+    border-radius: 200px;
+    font-size: 200%;
+  }
+}
+
+.ngStyleAfter {
+  opacity: 1;
+  transition: 1.5s;
+}
+
+.ngStyleBefore {
+  opacity: 0;
+  transition: 1s;
+  transform: translate(0px, 80px);
 }

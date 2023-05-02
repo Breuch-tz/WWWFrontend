@@ -1,17 +1,74 @@
-.title-heading {
-  border-top: 1px solid black;
-}
-
-@media only screen and (max-width: 576px) {
-  .title-heading {
-    border-top: none;
+.image-banner {
+  transition: 1s;
+  p {
+    transition: 1s;
   }
 }
 
-.title {
-  height: 250px;
-  background-image: url(./../../../assets/about/Laden02.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 100% 31%;
+.pricing-block {
+  transition: 1s;
+  outline: 1px solid rgb(198, 151, 73, 0);
+  button {
+    background-color: hsl(0, 0%, 95%);
+  }
+}
+.pricing-block:hover {
+  transform: translateY(-3.5%);
+  transition: 1s;
+  opacity: 1;
+  outline: 1px solid rgb(198, 151, 73, 0.6);
+  .pricing-border {
+    border-bottom: 1px solid rgb(198, 151, 73, 0.4);
+  }
+}
+
+.pricing-border {
+  transition: 1s;
+  border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+}
+
+.check {
+  color: rgb(1, 168, 1);
+}
+
+.package-symbol {
+  div {
+    transition: 0.3s;
+    box-shadow: 4px 6px 15px -10px rgb(17, 17, 17);
+    border-radius: 10px;
+  }
+  div:hover {
+    transition: 0.3s;
+    transform: translateY(-3.5%);
+    // span {
+    //   transition: 0.3s;
+    //   color: green;
+    // }
+  }
+  span {
+    transition: 0.3s;
+    font-size: 60px;
+  }
+}
+
+.ngStyleAfter {
+  opacity: 1;
+  transition-duration: 3.5s;
+  transform: translate(0px, 0px);
+}
+
+.ngStyleBefore {
+  opacity: 0;
+  transition-duration: 3s;
+  transform: translate(0px, 80px);
+}
+
+.animation-section {
+  div {
+    div {
+      div {
+        transition: 0.5s;
+      }
+    }
+  }
 }

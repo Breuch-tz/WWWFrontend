@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { EmailValidatorService } from '../../services/email-validator.service';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
-import { PostService } from 'src/app/mongo/post/post.service';
+import { PostService } from 'src/app/post/post.service';
 
 @Component({
   selector: 'app-contact',

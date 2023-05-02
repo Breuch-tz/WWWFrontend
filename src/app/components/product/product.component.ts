@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-product',
@@ -6,45 +6,46 @@ import { Component } from '@angular/core';
   styleUrls: ['./product.component.scss'],
 })
 export class ProductComponent {
-  imageObject: Array<object> = [
-    {
-      image: 'assets/img/slider/1.jpg',
-      thumbImage: 'assets/img/slider/1_min.jpeg',
-      alt: 'alt of image',
-      title: 'title of image',
-    },
-    {
-      image: '.../iOe/xHHf4nf8AE75h3j1x64ZmZ//Z==', // Support base64 image
-      thumbImage: '.../iOe/xHHf4nf8AE75h3j1x64ZmZ//Z==', // Support base64 image
-      title: 'Image title', //Optional: You can use this key if want to show image with title
-      alt: 'Image alt', //Optional: You can use this key if want to show image with alt
-      order: 1, //Optional: if you pass this key then slider images will be arrange according @input: slideOrderType
-    },
-    {
-      image: 'assets/img/slider/1.jpg',
-      thumbImage: 'assets/img/slider/1_min.jpeg',
-      alt: 'alt of image',
-      title: 'title of image',
-    },
-    {
-      image: '.../iOe/xHHf4nf8AE75h3j1x64ZmZ//Z==', // Support base64 image
-      thumbImage: '.../iOe/xHHf4nf8AE75h3j1x64ZmZ//Z==', // Support base64 image
-      title: 'Image title', //Optional: You can use this key if want to show image with title
-      alt: 'Image alt', //Optional: You can use this key if want to show image with alt
-      order: 1, //Optional: if you pass this key then slider images will be arrange according @input: slideOrderType
-    },
-    {
-      image: 'assets/img/slider/1.jpg',
-      thumbImage: 'assets/img/slider/1_min.jpeg',
-      alt: 'alt of image',
-      title: 'title of image',
-    },
-    {
-      image: '.../iOe/xHHf4nf8AE75h3j1x64ZmZ//Z==', // Support base64 image
-      thumbImage: '.../iOe/xHHf4nf8AE75h3j1x64ZmZ//Z==', // Support base64 image
-      title: 'Image title', //Optional: You can use this key if want to show image with title
-      alt: 'Image alt', //Optional: You can use this key if want to show image with alt
-      order: 1, //Optional: if you pass this key then slider images will be arrange according @input: slideOrderType
-    },
-  ];
+  public ngStyle1: String = 'ngStyleBefore';
+  public ngStyle2: String = 'ngStyleBefore';
+  public ngStyle3: String = 'ngStyleBefore';
+  public ngStyle4: String = 'ngStyleBefore';
+  public ngStyle5: String = 'ngStyleBefore';
+  public ngStyle6: String = 'ngStyleBefore';
+
+  constructor(private elementRef: ElementRef) {}
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(event: any) {
+    this.checkElementViewport();
+  }
+  private async checkElementViewport() {
+    const myElementAnimation =
+      this.elementRef.nativeElement.querySelector('#animation');
+
+    const bounding = myElementAnimation.getBoundingClientRect();
+
+    if (
+      bounding.top >= -200 &&
+      bounding.left >= 0 &&
+      bounding.right <= window.innerWidth &&
+      bounding.bottom - 200 <= window.innerHeight
+    ) {
+      this.ngStyle1 = 'ngStyleAfter';
+      await this.delay(300);
+      this.ngStyle2 = 'ngStyleAfter';
+      await this.delay(300);
+      this.ngStyle3 = 'ngStyleAfter';
+      await this.delay(300);
+      this.ngStyle4 = 'ngStyleAfter';
+      await this.delay(300);
+      this.ngStyle5 = 'ngStyleAfter';
+      await this.delay(300);
+      this.ngStyle6 = 'ngStyleAfter';
+    }
+  }
+
+  private async delay(ms: number) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
 }

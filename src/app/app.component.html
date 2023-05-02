@@ -1,5 +1,5 @@
 <nav class="bg-white px-2 py-2.5 fixed w-full z-20 top-0 left-0 border-b">
-  <div class="container flex flex-nowrap items-center justify-between mx-auto">
+  <div class="flex flex-nowrap items-center justify-between mx-auto">
     <a routerLink="/home">
       <img
         src="../favicon.png"
@@ -41,9 +41,18 @@
             routerLink="/home"
             routerLinkActive="routeIsActive"
             class="block py-2 pl-3 pr-4 rounded md:p-0"
-            aria-current="page"
             >Home</a
           >
+        </li>
+        <mat-divider *ngIf="!Mobilesize"></mat-divider>
+        <li>
+          <a
+            routerLink="/preise"
+            routerLinkActive="routeIsActive"
+            style="cursor: pointer; user-select: none"
+            class="block py-2 pl-3 pr-4 rounded md:p-0"
+            >Pricing
+          </a>
         </li>
         <mat-divider *ngIf="!Mobilesize"></mat-divider>
         <li>
@@ -54,17 +63,7 @@
             >About</a
           >
         </li>
-        <mat-divider *ngIf="!Mobilesize"></mat-divider>
 
-        <li>
-          <a
-            routerLink="/products"
-            routerLinkActive="routeIsActive"
-            style="cursor: pointer; user-select: none"
-            class="block py-2 pl-3 pr-4 rounded md:p-0"
-            >Products
-          </a>
-        </li>
         <mat-divider *ngIf="!Mobilesize"></mat-divider>
         <li>
           <a
