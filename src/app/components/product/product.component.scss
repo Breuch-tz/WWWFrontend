@@ -5,6 +5,7 @@
   }
 }
 
+//Priceblock area start
 .pricing-block {
   transition: 1s;
   outline: 1px solid rgb(198, 151, 73, 0);
@@ -30,45 +31,44 @@
 .check {
   color: rgb(1, 168, 1);
 }
+//Priceblock area end
 
-.package-symbol {
+//In Jedem Paket area start
+.animation-blocks {
   div {
     transition: 0.3s;
-    box-shadow: 4px 6px 15px -10px rgb(17, 17, 17);
+    border-radius: 0.5rem;
     border-radius: 10px;
   }
   div:hover {
     transition: 0.3s;
     transform: translateY(-3.5%);
-    // span {
-    //   transition: 0.3s;
-    //   color: green;
-    // }
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
   }
   span {
-    transition: 0.3s;
-    font-size: 60px;
+    font-size: 45px;
+  }
+}
+
+.animation {
+  div {
+    div {
+      div {
+        transition: 0.8s;
+      }
+    }
   }
 }
 
 .ngStyleAfter {
   opacity: 1;
-  transition-duration: 3.5s;
   transform: translate(0px, 0px);
 }
 
 .ngStyleBefore {
   opacity: 0;
-  transition-duration: 3s;
   transform: translate(0px, 80px);
 }
 
-.animation-section {
-  div {
-    div {
-      div {
-        transition: 0.5s;
-      }
-    }
-  }
-}
+//In Jedem Paket area end

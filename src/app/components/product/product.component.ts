@@ -25,12 +25,7 @@ export class ProductComponent {
 
     const bounding = myElementAnimation.getBoundingClientRect();
 
-    if (
-      bounding.top >= -200 &&
-      bounding.left >= 0 &&
-      bounding.right <= window.innerWidth &&
-      bounding.bottom - 200 <= window.innerHeight
-    ) {
+    if (bounding.top <= 500 && bounding.left >= 0) {
       this.ngStyle1 = 'ngStyleAfter';
       await this.delay(300);
       this.ngStyle2 = 'ngStyleAfter';
@@ -42,6 +37,18 @@ export class ProductComponent {
       this.ngStyle5 = 'ngStyleAfter';
       await this.delay(300);
       this.ngStyle6 = 'ngStyleAfter';
+    } else {
+      this.ngStyle1 = 'ngStyleBefore';
+      await this.delay(300);
+      this.ngStyle2 = 'ngStyleBefore';
+      await this.delay(300);
+      this.ngStyle3 = 'ngStyleBefore';
+      await this.delay(300);
+      this.ngStyle4 = 'ngStyleBefore';
+      await this.delay(300);
+      this.ngStyle5 = 'ngStyleBefore';
+      await this.delay(300);
+      this.ngStyle6 = 'ngStyleBefore';
     }
   }
 

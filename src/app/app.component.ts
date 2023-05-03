@@ -7,6 +7,7 @@ import { Meta } from '@angular/platform-browser';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  title = 'WebTree';
   public SidenavToggleStatus: boolean = true;
   public Mobilesize: boolean = true;
 
