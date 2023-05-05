@@ -16,7 +16,7 @@ export class PostService {
     eCompany: String;
     eCheckbox: Boolean;
   }): Observable<IEmailModel> {
-    return this.http.post<any>('https://webtree-design.de:3000', emailForm);
+    return this.http.post<any>('https://webtree-design.de:3000/', emailForm);
   }
 }
 
