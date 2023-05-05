@@ -37,8 +37,8 @@ export class ContactComponent {
     },
     resetForm: any
   ) {
-    emailForm.eEmailTo = 'breuch.tizian@gmail.com';
-    emailForm.eCompany = 'Puls der Zeit - Juwelier Breuch';
+    emailForm.eEmailTo = 'info@webtree-design.de';
+    emailForm.eCompany = 'WebTree - Tizian Breuch';
     if (!this.emailValidatorService.validateForm(emailForm)) {
       return;
     }

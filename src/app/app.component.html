@@ -85,109 +85,72 @@
 <footer
   class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 flex flex-col"
 >
-  <div class="container mx-auto">
-    <section class="text-gray-800">
-      <div class="grid lg:grid-cols-2 gap-1 xl:gap-x-4">
-        <div class="text-center flex flex-col justify-center items-center">
-          <strong>Öffnungszeiten</strong>
-
-          <div class="p-6">
-            <div class="grid grid-rows-7 grid-cols-2 grid-flow-row gap-1">
-              <div>Montag</div>
-              <div class="pr-15">10-0</div>
-              <div>Dienstag</div>
-              <div class="pr-15">0-0</div>
-              <div>Mittwoch</div>
-              <div class="pr-15">0-20</div>
-              <div>Donnerstag</div>
-              <div class="pr-15">0-0</div>
-              <div>Freitag</div>
-              <div class="pr-15">02-0</div>
-              <div>Samstag</div>
-              <div class="pr-15">0-03</div>
-              <div>Sonntag</div>
-              <div class="pr-15">0-0</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center flex justify-center items-center">
-          <div class="p-6">
-            <ol class="flex flex-col items-center text-center align-middle">
-              <li class="mb-1 flex">Strasse, plz ort- tel - email</li>
-              <br />
-              <li class="mb-1 flex items-center">Kontakt</li>
-              <li class="mb-1 flex items-center">IMpressum</li>
-              <li class="mb-1 flex items-center">Datenschutz</li>
-              <br />
-              <li class="mb-1 flex items-center">
-                ©2023
-                <a routerLink="/about" class="hover:underline">FIRMA</a>
-              </li>
-            </ol>
-          </div>
-        </div>
+  <div
+    class="mb-6 contentblock-one container mx-auto flex flex-col text-left items-center"
+  >
+    <h2 class="text-1xl font-bold sm:text-1xl mb-6">Öffnungszeiten</h2>
+    <div class="grid grid-rows-6 grid-flow-col gap-x-12 gap-y-1">
+      <div>Montag <br />Dienstag</div>
+      <div><b>Mittwoch</b></div>
+      <div><b>Donnerstag</b></div>
+      <div><b>Freitag</b></div>
+      <div><b>Samstag</b></div>
+      <div>Sonntag</div>
+      <div>Geschlossen</div>
+      <div>
+        10:00-13:00 <br />
+        15:00-18:00
       </div>
-    </section>
+      <div>
+        10:00-13:00 <br />
+        15:00-18:00
+      </div>
+      <div>
+        10:00-13:00 <br />
+        15:00-18:00
+      </div>
+      <div>10:00-13:00</div>
+      <div>Geschlossen</div>
+    </div>
+  </div>
+
+  <div
+    class="mb-6 contentblock-one container mx-auto flex flex-col text-center items-center"
+  >
+    <p>Emsdettener Straße 2, 48268 Greven - 02571 / 27 12 -info@breuch.de</p>
+  </div>
+
+  <div class="notranslate mx-auto flex flex-col">
+    <span class="text-sm sm:text-left"
+      >©2023 <a routerLink="/home" class="hover:underline">Puls der Zeit</a>.
+      All Rights Reserved.
+    </span>
+    <br />
+    <ul class="flex flex-col text-center items-center mt-3 text-sm sm:mt-0">
+      <li>
+        <a
+          routerLink="/contact"
+          routerLinkActive="routeIsActive"
+          class="text-sm mr-4 hover:underline md:mr-6"
+          >Contact</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/impressum"
+          routerLinkActive="routeIsActive"
+          class="text-sm mr-4 hover:underline md:mr-6"
+          >Impressum</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/datenschutzerklaerung"
+          routerLinkActive="routeIsActive"
+          class="text-sm mr-4 hover:underline"
+          >Datenschutzerklärung
+        </a>
+      </li>
+    </ul>
   </div>
 </footer>
-
-<!-- <div
-class="mb-6 contentblock-one container mx-auto flex flex-col text-center items-center"
->
-<h2 class="text-1xl font-bold sm:text-1xl">Öffnungszeiten</h2>
-<div class="grid grid-rows-6 grid-flow-col gap-1">
-  <div>Montag & Dienstag</div>
-  <div><b>Mittwoch</b></div>
-  <div><b>Donnerstag</b></div>
-  <div><b>Freitag</b></div>
-  <div><b>Samstag</b></div>
-  <div>Sonntag</div>
-  <div>Geschlossen</div>
-  <div>10:00-13:00 15:00-18:00</div>
-  <div>10:00-13:00 15:00-18:00</div>
-  <div>10:00-13:00 15:00-18:00</div>
-  <div>10:00-13:00</div>
-  <div>Geschlossen</div>
-</div>
-</div>
-
-<div
-class="mb-6 contentblock-one container mx-auto flex flex-col text-center items-center"
->
-<p>Emsdettener Straße 2, 48268 Greven - 02571 / 27 12 -info@breuch.de</p>
-</div>
-
-<div class="mx-auto flex flex-col">
-<span class="text-sm sm:text-left"
-  >©2023 <a routerLink="/home" class="hover:underline">Puls der Zeit</a>.
-  All Rights Reserved.
-</span>
-<br />
-<ul class="flex flex-col text-center items-center mt-3 text-sm sm:mt-0">
-  <li>
-    <a
-      routerLink="/contact"
-      routerLinkActive="routeIsActive"
-      class="text-sm mr-4 hover:underline md:mr-6"
-      >Contact</a
-    >
-  </li>
-  <li>
-    <a
-      routerLink="/impressum"
-      routerLinkActive="routeIsActive"
-      class="text-sm mr-4 hover:underline md:mr-6"
-      >Impressum</a
-    >
-  </li>
-  <li>
-    <a
-      routerLink="/datenschutzerklaerung"
-      routerLinkActive="routeIsActive"
-      class="text-sm mr-4 hover:underline"
-      >Datenschutzerklärung
-    </a>
-  </li>
-</ul>
-</div> -->
