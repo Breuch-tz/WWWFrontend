@@ -1,10 +1,6 @@
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
-import { Accordion } from 'flowbite';
-import type {
-  AccordionOptions,
-  AccordionItem,
-  AccordionInterface,
-} from 'flowbite';
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
