@@ -1,57 +1,78 @@
-.title-heading {
-  border-top: 1px solid black;
-}
-
-@media only screen and (max-width: 576px) {
-  .title-heading {
-    border-top: none;
-  }
-}
-
-.title {
-  height: 250px;
-  background-image: url(./../../../assets/about/Laden02.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 100% 31%;
-}
-
-
-
-.ngStyleAfter {
-  opacity: 1;
-  transition: 1.4s;
-}
-
-.ngStyleBefore {
-  opacity: 0;
-  transition: 1s;
-  transform: translate(0px, 80px);
-}
-
 .svg-image {
-  p {
-    box-shadow: 4px 6px 12px -10px rgb(17, 17, 17);
-    border-radius: 6px;
-    padding: 4px;
-    transition: 1s;
-  }
-
   span {
-    font-size: min(50vw, 360px);
-    transition: 1s;
-    box-shadow: 4px 6px 20px -10px rgb(17, 17, 17);
+    font-size: 90px;
+    transition: 0.5s;
+    box-shadow: 4px 6px 15px -10px rgb(17, 17, 17);
     border-radius: 200px;
     color: #000000e1;
     cursor: default;
     user-select: none;
   }
-  span:hover {
-    box-shadow: 4px 6px 25px -5px rgb(17, 17, 17);
-    transition: 1s;
+  div:hover {
+    span {
+      box-shadow: 4px 6px 15px -4px rgb(17, 17, 17);
+      transition: 0.5s;
+    }
   }
-  span:hover ~ p {
-    box-shadow: 4px 6px 20px -10px rgb(17, 17, 17);
+}
+
+.image-banner {
+  transition: 1s;
+  p {
     transition: 1s;
   }
 }
+.image-banner:hover {
+  .image-banner-btn {
+    transition: 0.3s;
+    border: solid 1px orange;
+    font-size: 115%;
+    backface-visibility: hidden;
+  }
+}
+
+.image-banner-btn {
+  backface-visibility: hidden;
+  background-color: rgb(247, 247, 247, 0.8);
+  transition: 0.3s;
+}
+
+//In Jedem Paket area start
+.animation-blocks {
+  div {
+    transition: 0.3s;
+    border-radius: 0.5rem;
+    border-radius: 10px;
+  }
+  div:hover {
+    transition: 0.3s;
+    transform: translateY(-3.5%);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+  span {
+    font-size: 45px;
+  }
+}
+
+.animation {
+  div {
+    div {
+      div {
+        transition: 0.8s;
+      }
+    }
+  }
+}
+
+.ngStyleAfter {
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+
+.ngStyleBefore {
+  opacity: 0;
+  transform: translate(0px, 80px);
+}
+
+//In Jedem Paket area end

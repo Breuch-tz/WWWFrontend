@@ -1,6 +1,10 @@
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
-import { tap } from 'rxjs';
-
+import { Accordion } from 'flowbite';
+import type {
+  AccordionOptions,
+  AccordionItem,
+  AccordionInterface,
+} from 'flowbite';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -14,6 +18,8 @@ export class HomeComponent {
   public ngStyle5: String = 'ngStyleBefore';
   public ngStyle6: String = 'ngStyleBefore';
 
+  public panelOpenState1: boolean = false;
+  public panelOpenState2: boolean = false;
   constructor(private elementRef: ElementRef) {}
 
   @HostListener('window:scroll', ['$event'])
@@ -26,7 +32,7 @@ export class HomeComponent {
 
     const bounding = myElementAnimation.getBoundingClientRect();
 
-    if (bounding.top <= 500 && bounding.left >= 0) {
+    if (bounding.top <= 800 && bounding.left >= 0) {
       this.ngStyle1 = 'ngStyleAfter';
       await this.delay(300);
       this.ngStyle2 = 'ngStyleAfter';

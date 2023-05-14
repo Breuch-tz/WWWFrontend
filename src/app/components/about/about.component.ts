@@ -7,51 +7,53 @@ import { ElementRef, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent {
-  
-
   public ngStyle1: String = 'ngStyleBefore';
   public ngStyle2: String = 'ngStyleBefore';
+  public ngStyle3: String = 'ngStyleBefore';
+  public ngStyle4: String = 'ngStyleBefore';
+  public ngStyle5: String = 'ngStyleBefore';
+  public ngStyle6: String = 'ngStyleBefore';
 
   constructor(private elementRef: ElementRef) {}
-  
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: any) {
     this.checkElementViewport();
   }
+  private async checkElementViewport() {
+    const myElementAnimation =
+      this.elementRef.nativeElement.querySelector('#animation');
 
-  private checkElementViewport() {
-    if (window.innerHeight <= 880) {
+    const bounding = myElementAnimation.getBoundingClientRect();
+
+    if (bounding.top <= 500 && bounding.left >= 0) {
       this.ngStyle1 = 'ngStyleAfter';
+      await this.delay(300);
       this.ngStyle2 = 'ngStyleAfter';
-      return;
+      await this.delay(300);
+      this.ngStyle3 = 'ngStyleAfter';
+      await this.delay(300);
+      this.ngStyle4 = 'ngStyleAfter';
+      await this.delay(300);
+      this.ngStyle5 = 'ngStyleAfter';
+      await this.delay(300);
+      this.ngStyle6 = 'ngStyleAfter';
+    } else {
+      this.ngStyle1 = 'ngStyleBefore';
+      await this.delay(300);
+      this.ngStyle2 = 'ngStyleBefore';
+      await this.delay(300);
+      this.ngStyle3 = 'ngStyleBefore';
+      await this.delay(300);
+      this.ngStyle4 = 'ngStyleBefore';
+      await this.delay(300);
+      this.ngStyle5 = 'ngStyleBefore';
+      await this.delay(300);
+      this.ngStyle6 = 'ngStyleBefore';
     }
+  }
 
-    const myElementA = this.elementRef.nativeElement.querySelector('#section1');
-    const myElementB = this.elementRef.nativeElement.querySelector('#section2');
-
-    const elements = [myElementA, myElementB];
-
-    for (let i = 0; i < elements.length; i++) {
-      const bounding = elements[i].getBoundingClientRect();
-
-      if (
-        bounding.top >= -300 &&
-        bounding.left >= 0 &&
-        bounding.right <= window.innerWidth &&
-        bounding.bottom - 300 <= window.innerHeight
-      ) {
-        switch (i + 1) {
-          case 1:
-            this.ngStyle1 = 'ngStyleAfter';
-            break;
-          case 2:
-            this.ngStyle2 = 'ngStyleAfter';
-            break;
-        }
-      } else {
-        // this.ngStyle = 'ngStyle2';
-      }
-    }
+  private async delay(ms: number) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
   }
 }

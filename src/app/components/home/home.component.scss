@@ -43,12 +43,9 @@
     transition: 0.3s;
     border-radius: 0.5rem;
     border-radius: 10px;
-  }
-  div:hover {
     transition: 0.3s;
-    transform: translateY(-3.5%);
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-      0 4px 6px -4px rgb(0 0 0 / 0.1);
+    // transform: translateY(-3.5%);
+    box-shadow: 0 0 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   }
   span {
     font-size: 45px;
@@ -72,7 +69,25 @@
 
 .ngStyleBefore {
   opacity: 0;
-  transform: translate(0px, 80px);
+  transform: translate(0px, 20px);
 }
 
 //In Jedem Paket area end
+
+mat-expansion-panel-header {
+  padding: 0;
+  ::ng-deep .mat-content-hide-toggle {
+    margin: 0 !important;
+    padding: 15px !important;
+  }
+}
+
+::ng-deep .mat-expansion-panel-body {
+  padding: 15px !important;
+  border-top: solid 1px rgb(0, 0, 0, 0.1) !important;
+}
+
+mat-panel-title {
+  margin: 0 !important;
+  // border: solid 1px rgb(0, 0, 0, 0.1);
+}
