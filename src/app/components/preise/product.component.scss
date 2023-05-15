@@ -73,8 +73,49 @@
 
 //In Jedem Paket area end
 
-
 .ng-gallery {
   background-color: rgb(247, 247, 247) !important;
   height: 50vh !important;
+}
+
+.expand-blocks {
+  div {
+    transition: 0.3s;
+    border-radius: 0.5rem;
+    border-radius: 10px;
+    transition: 0.3s;
+    // transform: translateY(-3.5%);
+    box-shadow: 0 0 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+  span {
+    font-size: 45px;
+  }
+}
+
+.expand {
+  div {
+    div {
+      div {
+        transition: 0.8s;
+      }
+    }
+  }
+}
+
+mat-expansion-panel-header {
+  padding: 0;
+  ::ng-deep .mat-content-hide-toggle {
+    margin: 0 !important;
+    padding: 15px !important;
+  }
+}
+
+::ng-deep .mat-expansion-panel-body {
+  padding: 15px !important;
+  border-top: solid 1px rgb(0, 0, 0, 0.1) !important;
+}
+
+mat-panel-title {
+  margin: 0 !important;
+  // border: solid 1px rgb(0, 0, 0, 0.1);
 }

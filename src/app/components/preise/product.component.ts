@@ -1,12 +1,14 @@
-import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
-
+import { Component, ElementRef, HostListener } from '@angular/core';
+import { GalleryItem, ImageItem } from 'ng-gallery';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  selector: 'app-product',
+  templateUrl: './product.component.html',
+  styleUrls: ['./product.component.scss'],
 })
-export class HomeComponent {
+export class ProductComponent {
+  public images!: GalleryItem[];
+
   public ngStyle1: String = 'ngStyleBefore';
   public ngStyle2: String = 'ngStyleBefore';
   public ngStyle3: String = 'ngStyleBefore';
@@ -16,19 +18,39 @@ export class HomeComponent {
 
   public panelOpenState1: boolean = false;
   public panelOpenState2: boolean = false;
+
   constructor(private elementRef: ElementRef) {}
+  ngOnInit() {
+    this.images = [
+      new ImageItem({
+        src: '../../../assets/home/rolex.jpg',
+        thumb: '../../../assets/home/rolex.jpg',
+      }),
+      new ImageItem({
+        src: '../../../assets/home/Trauring klassisch.jpg',
+        thumb: '../../../assets/home/Trauring klassisch.jpg',
+      }),
+      new ImageItem({
+        src: '../../../assets/home/Zeichnung Goldschmiede.jpg',
+        thumb: '../../../assets/home/Zeichnung Goldschmiede.jpg',
+      }),
+      new ImageItem({
+        src: '../../../assets/home/zwei-goldene-eheringe.jpg',
+        thumb: '../../../assets/home/zwei-goldene-eheringe.jpg',
+      }),
+    ];
+  }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: any) {
     this.checkElementViewport();
   }
   private async checkElementViewport() {
-    const myElementAnimation =
-      this.elementRef.nativeElement.querySelector('#animation');
+    const myElement = this.elementRef.nativeElement.querySelector('#animation');
 
-    const bounding = myElementAnimation.getBoundingClientRect();
+    const bounding = myElement.getBoundingClientRect();
 
-    if (bounding.top <= 800 && bounding.left >= 0) {
+    if (bounding.top <= 500 && bounding.left >= 0) {
       this.ngStyle1 = 'ngStyleAfter';
       await this.delay(300);
       this.ngStyle2 = 'ngStyleAfter';

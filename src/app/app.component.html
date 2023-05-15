@@ -42,10 +42,10 @@
       >
         <li>
           <a
-            routerLink="/home"
+            routerLink="/start"
             routerLinkActive="routeIsActive"
             class="block py-2 pl-3 pr-4 rounded md:p-0"
-            >Home</a
+            >Start</a
           >
         </li>
         <mat-divider *ngIf="!Mobilesize"></mat-divider>
@@ -55,26 +55,36 @@
             routerLinkActive="routeIsActive"
             style="cursor: pointer; user-select: none"
             class="block py-2 pl-3 pr-4 rounded md:p-0"
-            >Pricing
+            >Preise
           </a>
         </li>
         <mat-divider *ngIf="!Mobilesize"></mat-divider>
         <li>
           <a
-            routerLink="/about"
+            routerLink="/ueber-uns"
             routerLinkActive="routeIsActive"
             class="block py-2 pl-3 pr-4 rounded md:p-0"
-            >About</a
+            >Über uns</a
           >
         </li>
 
         <mat-divider *ngIf="!Mobilesize"></mat-divider>
         <li>
           <a
-            routerLink="/contact"
+            routerLink="/referenzen"
             routerLinkActive="routeIsActive"
             class="block py-2 pl-3 pr-4 rounded md:p-0"
-            >Contact
+            >Referenzen</a
+          >
+        </li>
+
+        <mat-divider *ngIf="!Mobilesize"></mat-divider>
+        <li>
+          <a
+            routerLink="/kontakt"
+            routerLinkActive="routeIsActive"
+            class="block py-2 pl-3 pr-4 rounded md:p-0"
+            >Kontakt
           </a>
         </li>
       </ul>
@@ -97,17 +107,17 @@
 
   <div class="notranslate mx-auto flex flex-col">
     <span class="text-sm sm:text-left"
-      >©2023 <a routerLink="/home" class="hover:underline">Puls der Zeit</a>.
-      All Rights Reserved.
+      >©2023 <a routerLink="/start" class="hover:underline">Webtree</a>. All
+      Rights Reserved.
     </span>
     <br />
     <ul class="flex flex-col text-center items-center mt-3 text-sm sm:mt-0">
       <li>
         <a
-          routerLink="/contact"
+          routerLink="/kontakt"
           routerLinkActive="routeIsActive"
           class="text-sm mr-4 hover:underline md:mr-6"
-          >Contact</a
+          >Kontakt</a
         >
       </li>
       <li>
