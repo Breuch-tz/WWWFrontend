@@ -16,6 +16,8 @@ export class ProductComponent {
   public ngStyle5: String = 'ngStyleBefore';
   public ngStyle6: String = 'ngStyleBefore';
 
+  public toggleProperty: boolean = false;
+
   public panelOpenState1: boolean = false;
   public panelOpenState2: boolean = false;
 
@@ -50,7 +52,7 @@ export class ProductComponent {
 
     const bounding = myElement.getBoundingClientRect();
 
-    if (bounding.top <= 500 && bounding.left >= 0) {
+    if (bounding.top <= 700 && bounding.left >= 0) {
       this.ngStyle1 = 'ngStyleAfter';
       await this.delay(300);
       this.ngStyle2 = 'ngStyleAfter';
@@ -79,5 +81,9 @@ export class ProductComponent {
 
   private async delay(ms: number) {
     return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  public toggle() {
+    this.toggleProperty = !this.toggleProperty;
   }
 }

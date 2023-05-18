@@ -13,13 +13,16 @@
     background-color: hsl(0, 0%, 95%);
   }
 }
-.pricing-block:hover {
-  transform: translateY(-3.5%);
-  transition: 1s;
-  opacity: 1;
-  outline: 1px solid rgb(198, 151, 73, 0.6);
-  .pricing-border {
-    border-bottom: 1px solid rgb(198, 151, 73, 0.4);
+
+@media only screen and (min-width: 1024px) {
+  .pricing-block:hover {
+    transform: translateY(-2%);
+    transition: 1s;
+    opacity: 1;
+    outline: 1px solid rgb(198, 151, 73, 0.6);
+    .pricing-border {
+      border-bottom: 1px solid rgb(198, 151, 73, 0.4);
+    }
   }
 }
 
@@ -42,7 +45,7 @@
   }
   div:hover {
     transition: 0.3s;
-    transform: translateY(-3.5%);
+    transform: translateY(-2%);
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
       0 4px 6px -4px rgb(0 0 0 / 0.1);
   }
@@ -84,7 +87,7 @@
     border-radius: 0.5rem;
     border-radius: 10px;
     transition: 0.3s;
-    // transform: translateY(-3.5%);
+    transform: translateY(-3.5%);
     box-shadow: 0 0 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   }
   span {
@@ -119,3 +122,27 @@ mat-panel-title {
   margin: 0 !important;
   // border: solid 1px rgb(0, 0, 0, 0.1);
 }
+
+// .card {
+//   width: 100%;
+//   height: 100%;
+//   position: relative;
+//   transform-style: preserve-3d;
+//   transition: transform 1.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+// }
+
+// .back {
+//   transform: rotateY(180deg);
+// }
+
+// .flipped {
+//   transform: rotateY(180deg);
+// }
+
+// .card .front,
+// .card .back {
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   backface-visibility: hidden;
+// }

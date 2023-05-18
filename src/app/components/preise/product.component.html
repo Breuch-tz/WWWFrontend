@@ -18,12 +18,6 @@
           <div
             class="text-center text-white px-6 py-6 md:py-0 md:px-12 max-w-[800px]"
           >
-            <h2
-              class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight leading-tight mb-2"
-            >
-              Are you ready
-            </h2>
-            <p class="mb-2">for an adventure</p>
             <p class="text-lg">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
               officia consequatur adipisci tenetur repudiandae rerum quos.
@@ -37,15 +31,15 @@
 
 <section class="mx-10">
   <h1
-    class="mt-12 mb-6 text-center notranslate text-4xl md:text-5xl xl:text-6xl tracking-tight"
+    class="my-12 text-center notranslate text-4xl md:text-5xl xl:text-6xl tracking-tight"
   >
-    Usnere Preise
+    Unsere Preise
   </h1>
   <mat-divider style="display: flex; margin: auto" class="w-1/2"></mat-divider>
-  <div class="mt-8 flex justify-center">
+  <div class="mt-12 mb-12 flex justify-center">
     <div class="text-center">
       <!-- <h2 class="text-3xl font-bold mb-6 text-center">Warum WebTree ?</h2> -->
-      <p class="text-gray-500 mb-12 lg:mx-32">
+      <p class="text-gray-500 lg:mx-32">
         Minus fuga aliquid vero facere ducimus quos, quisquam nemo? Molestias
         ullam provident vitae error aliquam dolorum temporibus? Doloremque,
         Minus fuga aliquid vero facere ducimus quos, quisquam nemo? Molestias
@@ -57,11 +51,11 @@
 
 <mat-divider style="display: flex; margin: auto" class="w-1/2"></mat-divider>
 
-<div class="container my-6 mb-4 xl:mb-6 mx-auto">
-  <section class="text-gray-800 mx-4 md:mx-0 lg:mx-0 xl:mx-0 2xl:mx-0">
+<div class="container my-12 mb-4 mx-auto">
+  <section class="text-gray-800 px-6">
     <div class="grid lg:grid-cols-3 gap-4 xl:gap-x-6">
-      <div class="pricing-block lg:mb-0 rounded-lg">
-        <div class="block rounded-lg shadow-lg bg-white h-full">
+      <div class="lg:mb-0">
+        <div class="pricing-block block rounded-lg shadow-lg bg-white h-full">
           <div class="pricing-border p-6 text-center">
             <p class="uppercase mb-4 text-sm">
               <strong>Basic</strong>
@@ -132,12 +126,6 @@
                 Telefon & Mail Support
               </li>
             </ol>
-            <p
-              style="cursor: pointer"
-              class="text-center text-blue-400 hover:text-blue-600"
-            >
-              Mehr erfahren >
-            </p>
           </div>
         </div>
       </div>
@@ -261,11 +249,11 @@
   </section>
 </div>
 
-<div class="container mb-8 xl:mb-10 mx-auto">
-  <section class="text-gray-800 mx-4 md:mx-0 lg:mx-0 xl:mx-0 2xl:mx-0">
+<div class="container mx-auto">
+  <section class="text-gray-800 px-6">
     <div class="grid lg:grid-cols-1 gap-4 xl:gap-x-6">
-      <div class="pricing-block lg:mb-0 rounded-lg">
-        <div class="block rounded-lg shadow-lg bg-white h-full">
+      <div class="lg:mb-0">
+        <div class="pricing-block block rounded-lg shadow-lg bg-white h-full">
           <div class="pricing-border p-6 text-center">
             <p class="uppercase mb-4 text-sm">
               <strong>Socialmedia</strong>
@@ -322,7 +310,7 @@
   </section>
 </div>
 
-<div class="my-16 items-center flex">
+<div class="my-12 items-center flex">
   <div
     class="image-banner h-56 bg-cover top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-100 transition duration-300 ease-in-out"
     style="
@@ -334,17 +322,17 @@
   ></div>
 </div>
 
-<div class="container px-6 mx-auto mb-16">
+<div class="container px-6 mx-auto my-12">
   <section id="animation" class="animation text-gray-800">
-    <div class="items-center text-center">
+    <div class="items-left text-left">
       <div
-        class="animation-blocks flex items-center text-center gap-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 md:grid-rows-3 lg:grid-rows-2"
+        class="animation-blocks flex gap-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 md:grid-rows-3 lg:grid-rows-2"
       >
         <div [ngClass]="ngStyle1" id="section1" class="p-4">
-          <span class="material-symbols-outlined"> gallery_thumbnail </span>
-          <p class="text-lg text-lg flex items-center justify-center mb-1">
-            Website konfiguration
-          </p>
+          <span class="material-symbols-outlined min-h-[60px] min-h-[60px]">
+            gallery_thumbnail
+          </span>
+          <p class="text-lg flex items-center mb-1">Website konfiguration</p>
           <p class="text-sm">
             Wir bieten Ihnen eine professionelle Gestaltung Ihrer Website, die
             ansprechendes Design, intuitive Benutzerführung und effektive
@@ -353,8 +341,10 @@
           </p>
         </div>
         <div [ngClass]="ngStyle2" id="section2" class="p-4">
-          <span class="material-symbols-outlined"> smartphone </span>
-          <p class="text-lg flex items-center justify-center mb-1">
+          <span class="material-symbols-outlined min-h-[60px]">
+            smartphone
+          </span>
+          <p class="text-lg flex items-center mb-1">
             Angepasst für Smartphones
           </p>
           <p class="text-sm">
@@ -364,10 +354,8 @@
           </p>
         </div>
         <div [ngClass]="ngStyle3" id="section3" class="p-4">
-          <span class="material-symbols-outlined"> http </span>
-          <p class="text-lg flex items-center justify-center mb-1">
-            Domain & Hosting
-          </p>
+          <span class="material-symbols-outlined min-h-[60px]"> http </span>
+          <p class="text-lg flex items-center mb-1">Domain & Hosting</p>
           <p class="text-sm">
             Für Ihre Bequemlichkeit übernehmen wir die Registrierung und
             Verwaltung Ihrer Domain und bieten zuverlässiges Hosting für Ihre
@@ -376,8 +364,10 @@
           </p>
         </div>
         <div [ngClass]="ngStyle4" id="section4" class="p-4">
-          <p class="mb-1"><b>SEO</b></p>
-          <p class="text-lg flex items-center justify-center mb-1">
+          <p class="mb-1 min-h-[60px] flex items-center">
+            <b>SEO</b>
+          </p>
+          <p class="text-lg flex items-center mb-1">
             Grundlegende Seo optimierung
           </p>
           <p class="text-sm">
@@ -388,20 +378,18 @@
           </p>
         </div>
         <div [ngClass]="ngStyle5" id="section5" class="p-4">
-          <span class="material-symbols-outlined"> mail </span>
-          <p class="text-lg flex items-center justify-center mb-1">
-            Postfach & Mailadresse
-          </p>
+          <span class="material-symbols-outlined min-h-[60px]"> mail </span>
+          <p class="text-lg flex items-center mb-1">Postfach & Mailadresse</p>
           <p class="text-sm">
             Wir stellen Ihnen eine kostenlose E-Mail-Adresse und ein Postfach
             zur Verfügung.
           </p>
         </div>
         <div [ngClass]="ngStyle6" id="section6" class="p-4">
-          <span class="material-symbols-outlined"> support_agent </span>
-          <p class="text-lg flex items-center justify-center mb-1">
-            Telefon und Mail Support
-          </p>
+          <span class="material-symbols-outlined min-h-[60px]">
+            support_agent
+          </span>
+          <p class="text-lg flex items-center mb-1">Telefon und Mail Support</p>
           <p class="text-sm">
             Wir sind stets bemüht, Ihnen den besten Support zu bieten und stehen
             Ihnen während unserer Öffnungszeiten mit schnellen und effizienten
@@ -413,10 +401,10 @@
   </section>
 </div>
 
-<mat-divider style="display: flex; margin: auto" class="w-1/1"></mat-divider>
+<mat-divider style="display: flex; margin: auto" class="w-1/2"></mat-divider>
 
-<div class="container px-6 mx-auto mt-16">
-  <section id="expand" class="animation mb-32 text-gray-800">
+<div class="container px-6 mx-auto my-12">
+  <section id="expand" class="animation text-gray-800">
     <div class="items-center text-center">
       <h5 class="mb-12 text-2xl font-bold">Warum WebTree?</h5>
       <div
@@ -431,10 +419,12 @@
             >
               <mat-expansion-panel-header>
                 <mat-panel-title class="flex justify-center">
-                  SAo machen wir ihre super tolle seite!
-                  {{ panelOpenState1 ? "open" : "closed" }}
+                  Was ist enthalten ?
+                  <!-- {{ panelOpenState1 ? "open" : "closed" }} -->
                 </mat-panel-title>
-                <span class="material-symbols-outlined"> expand_more </span>
+                <span class="panelOne material-symbols-outlined">
+                  expand_more
+                </span>
               </mat-expansion-panel-header>
               <p>
                 This is the primary content of the panel.This is the primary
@@ -442,7 +432,15 @@
                 panel.This is the primary content of the panel.This is the
                 primary content of the panel.This is the primary content of the
                 panel.This is the primary content of the panel.This is the
-                primary content of the panel.
+                primary content of the panel. This is the primary content of the
+                panel.This is the primary content of the panel.This is the
+                primary content of the panel.This is the primary content of the
+                panel.This is the primary content of the panel.This is the
+                primary content of the panel.This is the primary content of the
+                panel.This is the primary content of the panel. This is the
+                primary content of the panel.This is the primary content of the
+                panel.This is the primary content of the panel.This is the
+                primary content of the panel.This is the primary content of the
               </p>
             </mat-expansion-panel>
           </div>
@@ -456,7 +454,7 @@
               <mat-expansion-panel-header>
                 <mat-panel-title class="flex justify-center">
                   This is the expansion title
-                  {{ panelOpenState2 ? "open" : "closed" }}
+                  <!-- {{ panelOpenState2 ? "open" : "closed" }} -->
                 </mat-panel-title>
                 <span class="material-symbols-outlined"> expand_more </span>
               </mat-expansion-panel-header>
@@ -467,7 +465,7 @@
             <mat-expansion-panel hideToggle>
               <mat-expansion-panel-header>
                 <mat-panel-title class="flex justify-center">
-                  This is the expansion title
+                  This is the expansion titlee
                 </mat-panel-title>
                 <span class="material-symbols-outlined"> expand_more </span>
               </mat-expansion-panel-header>
@@ -480,7 +478,7 @@
   </section>
 </div>
 
-<div class="py-10">
+<!-- <div class="py-10">
   <gallery
     class="ng-gallery"
     [nav]="false"
@@ -497,4 +495,9 @@
     imageSize="contain"
     [items]="images"
   ></gallery>
-</div>
+</div> -->
+
+<!-- <div [ngClass]="toggleProperty ? 'flipped' : ''" class="card">
+  <div class="front" (click)="toggle()">11111111111</div>
+  <div class="back" (click)="toggle()">2222222222222</div>
+</div> -->

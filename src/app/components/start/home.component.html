@@ -18,15 +18,10 @@
           <div
             class="text-center text-white px-6 py-6 md:py-0 md:px-12 max-w-[800px]"
           >
-            <h2
-              class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight leading-tight mb-2"
-            >
-              Are you ready
-            </h2>
-            <p class="mb-2">for an adventure</p>
             <p class="text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-              officia consequatur adipisci tenetur repudiandae rerum quos.
+              Bei uns erhalten Sie eine moderne Website, die Ihr Unternehmen
+              zeitgemäß präsentiert. Vertrauen Sie unserem erfahrenen Team für
+              eine ansprechende Benutzererfahrung.
             </p>
           </div>
         </div>
@@ -37,19 +32,21 @@
 
 <section class="mx-10">
   <h1
-    class="mt-12 mb-6 text-center notranslate text-4xl md:text-5xl xl:text-6xl tracking-tight"
+    class="my-12 text-center notranslate text-4xl md:text-5xl xl:text-6xl tracking-tight"
   >
     Eine Website für Sie
   </h1>
   <mat-divider style="display: flex; margin: auto" class="w-1/2"></mat-divider>
-  <div class="mt-8 flex justify-center">
+  <div class="mt-12 mb-12 flex justify-center">
     <div class="text-center">
       <!-- <h2 class="text-3xl font-bold mb-6 text-center">Warum WebTree ?</h2> -->
-      <p class="text-gray-500 mb-12 lg:mx-32">
-        Minus fuga aliquid vero facere ducimus quos, quisquam nemo? Molestias
-        ullam provident vitae error aliquam dolorum temporibus? Doloremque,
-        Minus fuga aliquid vero facere ducimus quos, quisquam nemo? Molestias
-        ull quasi
+      <p class="text-gray-500 lg:mx-32">
+        Unser Unternehmen steht für lokal verankerten, preiswerten Service mit
+        Leidenschaft. Wir sind stolz darauf, Ihnen maßgeschneiderte Lösungen
+        anzubieten, die Ihre Bedürfnisse erfüllen und Ihr Unternehmen
+        erfolgreich machen. Vertrauen Sie auf unser engagiertes Team, das mit
+        Hingabe und Fachkenntnis arbeitet, um Ihnen den bestmöglichen Service zu
+        bieten.
       </p>
     </div>
   </div>
@@ -57,46 +54,40 @@
 
 <mat-divider style="display: flex; margin: auto" class="w-1/2"></mat-divider>
 
-<div class="container my-6 mt-8 px-6 mx-auto">
-  <section class="text-gray-800 text-center">
-    <div class="svg-image grid md:grid-cols-1 lg:grid-cols-3 lg:gap-x-12">
-      <div class="mb-12 lg:mb-0">
-        <div
-          class="container text-center content-center flex flex-col items-center justify-items-center mx-auto mb-4"
-        >
-          <span class="p-3 material-symbols-outlined"> verified_user </span>
+<div class="container px-6 mx-auto my-12">
+  <section id="animation" class="animation text-gray-800">
+    <div class="items-left text-left">
+      <div
+        class="animation-blocks flex gap-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 md:grid-rows-1 lg:grid-rows-1"
+      >
+        <div [ngClass]="ngStyle1" id="section1" class="p-4">
+          <span class="material-symbols-outlined"> security </span>
+          <p class="text-lg flex items-center mb-1">Sicher</p>
+          <p class="text-sm">
+            Mit uns sind Sie auf der sicheren Seite. Unsere Erfahrung und
+            Expertise gewährleisten eine professionelle und zuverlässige
+            Umsetzung Ihrer Website. Vertrauen Sie uns und erhalten Sie eine
+            herausragende Online-Präsenz für Ihr Unternehmen.
+          </p>
         </div>
-        <h5 class="text-lg font-bold mb-4">Sicher</h5>
-        <p class="text-gray-500">
-          Eum nostrum fugit numquam, voluptates veniam neque quibusdam ullam
-          aspernatur odio soluta, quisquam dolore animi
-        </p>
-      </div>
-
-      <div class="mb-12 lg:mb-0">
-        <div
-          class="container text-center content-center flex flex-col items-center justify-items-center mx-auto mb-4"
-        >
-          <span class="p-3 material-symbols-outlined"> workspace_premium </span>
+        <div [ngClass]="ngStyle2" id="section2" class="p-4">
+          <span class="material-symbols-outlined"> workspace_premium </span>
+          <p class="text-lg flex items-center mb-1">Professionell</p>
+          <p class="text-sm">
+            Unsere Website-Designs überzeugen ihre Zielgruppe. Vertrauen Sie uns
+            für eine erfolgreiche Online-Präsenz.
+          </p>
         </div>
-        <h5 class="text-lg font-bold mb-4">Professionell</h5>
-        <p class="text-gray-500">
-          Laudantium totam quas cumque pariatur at doloremque hic quos quia
-          eius. Reiciendis optio minus mollitia rerum labore
-        </p>
-      </div>
-
-      <div class="mb-0 md:mb-0">
-        <div
-          class="container text-center content-center flex flex-col items-center justify-items-center mx-auto mb-4"
-        >
-          <span class="p-3 material-symbols-outlined"> euro_symbol </span>
+        <div [ngClass]="ngStyle3" id="section3" class="p-4">
+          <span class="material-symbols-outlined"> euro </span>
+          <p class="text-lg flex items-center mb-1">Preiswert</p>
+          <p class="text-sm">
+            Profitieren Sie von unserem preiswerten Service mit einem
+            ausgewogenen Preis-Leistungs-Verhältnis, speziell für lokale Kunden.
+            Vertrauen Sie uns, um qualitativ hochwertige Lösungen zu einem
+            erschwinglichen Preis zu erhalten.
+          </p>
         </div>
-        <h5 class="text-lg font-bold mb-4">Preiswert</h5>
-        <p class="text-gray-500">
-          Enim cupiditate, minus nulla dolor cumque iure eveniet facere ullam
-          beatae hic voluptatibus dolores exercitationem
-        </p>
       </div>
     </div>
   </section>
@@ -122,24 +113,21 @@
   </div>
 </div>
 
-<div class="container px-6 mx-auto">
-  <section id="expand" class="animation mb-32 text-gray-800">
+<mat-divider style="display: flex; margin: auto" class="w-1/2"></mat-divider>
+
+<div class="container my-12 px-6 mx-auto">
+  <section id="expand" class="animation text-gray-800">
     <div class="items-center text-center">
       <h5 class="mb-12 text-2xl font-bold">Warum WebTree?</h5>
       <div
         class="expand-blocks flex flex-col items-center justify-center text-center"
       >
         <mat-accordion class="w-full">
-          <div [ngClass]="ngStyle1" class="mb-4">
-            <mat-expansion-panel
-              hideToggle
-              (opened)="panelOpenState1 = true"
-              (closed)="panelOpenState1 = false"
-            >
+          <div class="mb-4">
+            <mat-expansion-panel hideToggle>
               <mat-expansion-panel-header>
                 <mat-panel-title class="flex justify-center">
                   SAo machen wir ihre super tolle seite!
-                  {{ panelOpenState1 ? "open" : "closed" }}
                 </mat-panel-title>
                 <span class="material-symbols-outlined"> expand_more </span>
               </mat-expansion-panel-header>
@@ -154,23 +142,18 @@
             </mat-expansion-panel>
           </div>
 
-          <div [ngClass]="ngStyle2" class="mb-4">
-            <mat-expansion-panel
-              hideToggle
-              (opened)="panelOpenState2 = true"
-              (closed)="panelOpenState2 = false"
-            >
+          <div class="mb-4">
+            <mat-expansion-panel hideToggle>
               <mat-expansion-panel-header>
                 <mat-panel-title class="flex justify-center">
                   This is the expansion title
-                  {{ panelOpenState2 ? "open" : "closed" }}
                 </mat-panel-title>
                 <span class="material-symbols-outlined"> expand_more </span>
               </mat-expansion-panel-header>
               <p>This is the primary content of the panel.</p>
             </mat-expansion-panel>
           </div>
-          <div [ngClass]="ngStyle3" class="mb-4">
+          <div class="mb-4">
             <mat-expansion-panel hideToggle>
               <mat-expansion-panel-header>
                 <mat-panel-title class="flex justify-center">

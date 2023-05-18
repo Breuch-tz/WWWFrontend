@@ -1,17 +1,26 @@
-.svg-image {
-  span {
-    font-size: 90px;
-    transition: 0.5s;
-    box-shadow: 4px 6px 15px -10px rgb(17, 17, 17);
-    border-radius: 200px;
-    color: #000000e1;
-    cursor: default;
-    user-select: none;
+.animation-blocks {
+  div {
+    transition: 0.3s;
+    border-radius: 0.5rem;
+    border-radius: 10px;
   }
   div:hover {
-    span {
-      box-shadow: 4px 6px 15px -4px rgb(17, 17, 17);
-      transition: 0.5s;
+    transition: 0.3s;
+    transform: translateY(-2%);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+  span {
+    font-size: 45px;
+  }
+}
+
+.animation {
+  div {
+    div {
+      div {
+        transition: 0.8s;
+      }
     }
   }
 }
@@ -38,13 +47,26 @@
 }
 
 //In Jedem Paket area start
+
+.ngStyleAfter {
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+
+.ngStyleBefore {
+  opacity: 0;
+  transform: translate(0px, 20px);
+}
+
+//In Jedem Paket area end
+
 .expand-blocks {
   div {
     transition: 0.3s;
     border-radius: 0.5rem;
     border-radius: 10px;
     transition: 0.3s;
-    // transform: translateY(-3.5%);
+    transform: translateY(-3.5%);
     box-shadow: 0 0 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   }
   span {
@@ -61,18 +83,6 @@
     }
   }
 }
-
-.ngStyleAfter {
-  opacity: 1;
-  transform: translate(0px, 0px);
-}
-
-.ngStyleBefore {
-  opacity: 0;
-  transform: translate(0px, 20px);
-}
-
-//In Jedem Paket area end
 
 mat-expansion-panel-header {
   padding: 0;
