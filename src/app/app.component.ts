@@ -14,9 +14,10 @@ export class AppComponent {
   public ScreenWidth!: number;
 
   constructor(public meta: Meta) {
-    this.onResize();
+    this.onResize();    
   }
   ngOnInit() {
+    
     this.meta.addTags([
       {
         name: 'description',
