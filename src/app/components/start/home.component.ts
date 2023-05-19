@@ -10,6 +10,8 @@ export class HomeComponent {
   public ngStyle2: String = 'ngStyleBefore';
   public ngStyle3: String = 'ngStyleBefore';
 
+  public websiteKonfigurierenStep: number = 0;
+
   constructor(private elementRef: ElementRef) {}
 
   @HostListener('window:scroll', ['$event'])
@@ -39,5 +41,13 @@ export class HomeComponent {
   }
   private async delay(ms: number) {
     return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  public websiteKonfiguration(value: String) {
+    console.log(value);
+  }
+  public applyProzessbarStep() {
+    const prozess = this.websiteKonfigurierenStep * 10;
+    return { width: prozess + '%' };
   }
 }

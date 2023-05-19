@@ -111,7 +111,9 @@
       Rights Reserved.
     </span>
     <br />
-    <ul class="container mx-auto flex flex-row text-center items-center gap-6">
+    <ul
+      class="container mx-auto flex flex-col md:flex-row text-center items-center gap-2 md:gap-6"
+    >
       <li>
         <a
           routerLink="/kontakt"
@@ -120,7 +122,7 @@
           >Kontakt</a
         >
       </li>
-      <span>|</span>
+      <span *ngIf="Mobilesize">|</span>
       <li>
         <a
           routerLink="/impressum"
@@ -129,7 +131,7 @@
           >Impressum</a
         >
       </li>
-      <span>|</span>
+      <span *ngIf="Mobilesize">|</span>
       <li>
         <a
           routerLink="/datenschutzerklaerung"
