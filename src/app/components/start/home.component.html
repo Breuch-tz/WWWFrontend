@@ -30,7 +30,7 @@
   </section>
 </div>
 
-<section class="mx-10">
+<section class="container mx-auto">
   <h1
     class="my-12 text-center notranslate text-4xl md:text-5xl xl:text-6xl tracking-tight"
   >
@@ -40,7 +40,7 @@
   <div class="mt-12 mb-12 flex justify-center">
     <div class="text-center">
       <!-- <h2 class="text-3xl font-bold mb-6 text-center">Warum WebTree ?</h2> -->
-      <p class="text-gray-500 lg:mx-32">
+      <p class="text-gray-500">
         Unser Unternehmen steht für lokal verankerten, preiswerten Service mit
         Leidenschaft. Wir sind stolz darauf, Ihnen maßgeschneiderte Lösungen
         anzubieten, die Ihre Bedürfnisse erfüllen und Ihr Unternehmen
@@ -147,12 +147,12 @@
     <div class="grid lg:grid-cols-1 gap-4 xl:gap-x-6">
       <div class="lg:mb-0">
         <div class="block rounded-lg shadow-lg bg-white h-full">
-          <div class="p-6 text-center">
+          <div class="p-6 pb-0 text-center">
             <p class="uppercase mb-4 text-sm">
               <strong>Konfiguriere deine Website</strong>
             </p>
 
-            <p>1 von 2</p>
+            <p>{{ websiteKonfigurierenStep + 1 }} von 6</p>
             <div
               class="mx-auto w-1/2 h-4 mb-4 bg-gray-200 rounded-full dark:bg-gray-700"
             >
@@ -166,32 +166,70 @@
           <!-- // -->
 
           <div>
-            <h5 class="text-center mx-auto">
-              In welcher Branche sind Sie tätig?
-            </h5>
-            <div class="p-6 flex justify-center">
+            <div class="flex justify-center">
               <ol
-                class="flex align-items justify-content text-center items-center list-inside"
+                class="flex flex-col align-items justify-content text-center items-center list-inside"
               >
                 <form
+                  [formGroup]="form"
                   class="md:mb-0 mb-4"
                   #individualForm="ngForm"
-                  (ngSubmit)="websiteKonfiguration(individualForm.value)"
                 >
-                  <div class="form-group">
+                  <div
+                    class="form-group"
+                    *ngFor="let question of questions; index as i"
+                  >
+                    <h5
+                      class="text-center mx-auto py-6"
+                      *ngIf="i == websiteKonfigurierenStep"
+                    >
+                      {{ question[0] }}
+                    </h5>
                     <input
-                      required
-                      name="branche"
-                      ngModel
+                      autocomplete="off"
+                      *ngIf="i == websiteKonfigurierenStep"
+                      name="input"
                       type="text"
                       class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                      placeholder="Branche"
+                      placeholder="{{ question[1] }}"
+                      formControlName="{{ question[2] }}"
+                      [required]="isRequired(question[2])"
                     />
+                    <div
+                      *ngIf="
+                        i == websiteKonfigurierenStep && isRequired(question[2])
+                      "
+                    >
+                      This field is required.
+                    </div>
                   </div>
+
                   <button
-                    class="w-20 mx-4 mt-4 p-2 px-4 bg-gray-100 rounded-lg"
+                    type="button"
+                    *ngIf="websiteKonfigurierenStep == 5"
+                    class="flex-col w-20 mx-4 my-6 p-2 px-4 bg-gray-100 rounded-lg"
+                    (click)="websiteKonfiguration(individualForm)"
                   >
                     Senden
+                  </button>
+                  <button
+                    (click)="previousStep()"
+                    type="button"
+                    *ngIf="
+                      websiteKonfigurierenStep != 0 &&
+                      websiteKonfigurierenStep != 5
+                    "
+                    class="w-20 mx-4 my-6 p-2 px-4 bg-gray-100 rounded-lg"
+                  >
+                    Zurück
+                  </button>
+                  <button
+                    (click)="nextStep(individualForm.value)"
+                    type="button"
+                    *ngIf="websiteKonfigurierenStep != 5"
+                    class="w-20 mx-4 my-6 p-2 px-4 bg-gray-100 rounded-lg"
+                  >
+                    Weiter
                   </button>
                 </form>
               </ol>
