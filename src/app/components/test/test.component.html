@@ -1,0 +1,81 @@
+<p>test works!</p>
+<p>test works!</p>
+<p>test works!</p>
+<p>test works!</p>
+<p>test works!</p>
+<p>test works!</p>
+<p>test works!</p>
+<p>test works!</p>
+<p>test works!</p>
+<p>test works!</p>
+<p>test works!</p>
+
+<mat-stepper linear #stepper>
+  <mat-step [stepControl]="firstFormGroup" label="First">
+    <form [formGroup]="firstFormGroup" (ngSubmit)="onSubmit(1)">
+      <mat-label>Name</mat-label>
+      <input
+        matInput
+        placeholder="Last name, First name"
+        formControlName="firstCtrl"
+        required
+      />
+
+      <mat-error
+        class="text-sm"
+        *ngIf="!firstFormGroup.valid && firstSubmit"
+        [@inOutAnimation]
+      >
+        Email is required
+      </mat-error>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup" label="Second">
+    <form [formGroup]="secondFormGroup" (ngSubmit)="onSubmit(2)">
+      <mat-label>Name</mat-label>
+      <input
+        matInput
+        placeholder="Last name, First name"
+        formControlName="secondCtrl"
+        required
+      />
+      <mat-error
+        class="text-danger"
+        *ngIf="!secondFormGroup.valid && secondSubmit"
+      >
+        Name is required
+      </mat-error>
+
+      <div>
+        <button type="button" mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step label="Done">
+    <form>
+      <ng-template matStepperIcon="edit" let-index="index">
+        <ng-container [ngSwitch]="index">
+          <mat-icon *ngSwitchCase="0">done</mat-icon>
+          <mat-icon *ngSwitchCase="1">done</mat-icon>
+          <mat-icon *ngSwitchCase="2">done</mat-icon>
+        </ng-container>
+      </ng-template>
+
+      <div>
+        <button type="button" mat-button matStepperPrevious>Back</button>
+        <button mat-button>Senden</button>
+      </div>
+    </form>
+  </mat-step>
+</mat-stepper>
+
+<p>test works!</p>
+<p>test works!</p>
+<p>test works!</p>
+<p>test works!</p>
+<p>test works!</p>
+<p>test works!</p>

@@ -8,6 +8,7 @@ import { ReferenzenComponent } from './components/referenzen/referenzen.componen
 import { ContactComponent } from './components/contact/contact.component';
 import { ImpressumComponent } from './components/impressum/impressum.component';
 import { DatenschutzComponent } from './components/datenschutz/datenschutz.component';
+import { TestComponent } from './components/test/test.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/start', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'kontakt', component: ContactComponent },
   { path: 'impressum', component: ImpressumComponent },
   { path: 'datenschutzerklaerung', component: DatenschutzComponent },
+  { path: 'test', component: TestComponent },
 ];
 
 @NgModule({
