@@ -13,30 +13,36 @@
 <mat-stepper linear #stepper>
   <mat-step [stepControl]="firstFormGroup" label="First">
     <form [formGroup]="firstFormGroup" (ngSubmit)="onSubmit(1)">
-      <mat-label>Name</mat-label>
-      <input
+      <div class="flex flex-col justify-center items-center text-center">
+
+        <mat-label>Name</mat-label>
+        <input
+        class="my-3"
         matInput
         placeholder="Last name, First name"
         formControlName="firstCtrl"
         required
-      />
-
-      <mat-error
+        />
+        
+        <mat-error
         class="text-sm"
         *ngIf="!firstFormGroup.valid && firstSubmit"
         [@inOutAnimation]
-      >
+        >
         Email is required
       </mat-error>
       <div>
         <button mat-button matStepperNext>Next</button>
       </div>
+    </div>
     </form>
   </mat-step>
   <mat-step [stepControl]="secondFormGroup" label="Second">
     <form [formGroup]="secondFormGroup" (ngSubmit)="onSubmit(2)">
+      <div class="flex flex-col">
       <mat-label>Name</mat-label>
       <input
+      class="my-3"
         matInput
         placeholder="Last name, First name"
         formControlName="secondCtrl"
@@ -45,6 +51,7 @@
       <mat-error
         class="text-danger"
         *ngIf="!secondFormGroup.valid && secondSubmit"
+        [@inOutAnimation]
       >
         Name is required
       </mat-error>
@@ -53,6 +60,7 @@
         <button type="button" mat-button matStepperPrevious>Back</button>
         <button mat-button matStepperNext>Next</button>
       </div>
+    </div>
     </form>
   </mat-step>
   <mat-step label="Done">
@@ -67,7 +75,7 @@
 
       <div>
         <button type="button" mat-button matStepperPrevious>Back</button>
-        <button mat-button>Senden</button>
+        <button mat-button >Senden</button>
       </div>
     </form>
   </mat-step>

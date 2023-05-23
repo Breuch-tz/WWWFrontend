@@ -104,7 +104,7 @@ mat-panel-title {
 
 //Priceblock area start
 .pricing-block {
-  transition: 1s;
+  transition: 2s;
   outline: 1px solid rgb(198, 151, 73, 0);
   button {
     background-color: hsl(0, 0%, 95%);
@@ -132,3 +132,9 @@ mat-panel-title {
   color: rgb(1, 168, 1);
 }
 //Priceblock area end
+
+
+
+::ng-deep .mat-horizontal-stepper-header-container {
+  display: none !important;
+}

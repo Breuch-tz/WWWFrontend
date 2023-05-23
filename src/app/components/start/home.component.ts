@@ -13,28 +13,49 @@ import {
   Validators,
 } from '@angular/forms';
 
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+} from '@angular/animations';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
+  animations: [
+    trigger('inOutAnimation', [
+      transition(':enter', [
+        style({ height: 0, opacity: 0 }),
+        animate('0.5s ease-out', style({ height: 25, opacity: 1 })),
+      ]),
+      transition(':leave', [
+        style({ height: 25, opacity: 1 }),
+        animate('0.5s ease-in', style({ height: 0, opacity: 0 })),
+      ]),
+    ]),
+  ],
 })
 export class HomeComponent {
   public ngStyle1: String = 'ngStyleBefore';
   public ngStyle2: String = 'ngStyleBefore';
   public ngStyle3: String = 'ngStyleBefore';
 
-  public websiteKonfigurierenStep: number = 0;
+  public websiteKonfigurierenStep: number = 1;
+  public websiteKonfigurierenStepMax: number = 4;
 
-  public questions = [
-    ['In welcher Branche sind Sie tätig?', 'Branche', 'branche'],
-    ['Wieviele Seiten soll Ihre Seiten beinhalten?', '1,2,3 ...', 'page'],
-    ['3', 'c', 'a'],
-    ['4', 'd', 'b'],
-    ['5', 'e', 'c'],
-  ];
-  public form!: FormGroup;
+  public firstFormGroup!: FormGroup;
+  public secondFormGroup!: FormGroup;
+  public thirdFormGroup!: FormGroup;
+  public lastFormGroup!: FormGroup;
+  public firstSubmit: boolean = false;
+  public secondSubmit: boolean = false;
+  public thirdSubmit: boolean = false;
+  public lastSubmit: boolean = false;
 
-  constructor(private elementRef: ElementRef) {}
+  constructor(private elementRef: ElementRef, private fb: FormBuilder) {}
 
   @ViewChild('individualForm') individualForm!: NgForm;
   @HostListener('window:scroll', ['$event'])
@@ -43,12 +64,17 @@ export class HomeComponent {
   }
 
   ngOnInit() {
-    this.form = new FormGroup({
-      branche: new FormControl('', [Validators.required]),
-      page: new FormControl('', [Validators.required]),
-      a: new FormControl('', [Validators.required]),
-      b: new FormControl('', [Validators.required]),
-      c: new FormControl('', [Validators.required]),
+    this.firstFormGroup = this.fb.group({
+      firstCtrl: ['', Validators.required],
+    });
+    this.secondFormGroup = this.fb.group({
+      firstCtrl: ['', Validators.required],
+    });
+    this.thirdFormGroup = this.fb.group({
+      firstCtrl: ['', ''],
+    });
+    this.lastFormGroup = this.fb.group({
+      firstCtrl: ['', Validators.required],
     });
   }
 
@@ -77,27 +103,64 @@ export class HomeComponent {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
-  public isRequired(controlName: string): boolean {
-    const control = this.form.get(controlName);
-    console.log(control ? control.hasError('required') : false);
-
-    return control ? control.hasError('required') : false;
+  public websiteKonfigurierenStepPlus() {
+    if (this.websiteKonfigurierenStep == this.websiteKonfigurierenStepMax) {
+      return;
+    }
+    this.websiteKonfigurierenStep++;
+  }
+  public websiteKonfigurierenStepMinus() {
+    if (this.websiteKonfigurierenStep == 1) {
+      return;
+    }
+    this.websiteKonfigurierenStep--;
   }
 
-  public websiteKonfiguration(value: any) {
-    console.log(value.value);
-  }
   public applyProzessbarStep() {
-    const prozess = this.websiteKonfigurierenStep * 20;
+    const prozess =
+      (this.websiteKonfigurierenStep / this.websiteKonfigurierenStepMax) * 100;
     return { width: prozess + '%' };
   }
 
-  public nextStep(value: any) {
-    console.log(value);
-
-    this.websiteKonfigurierenStep++;
+  get registerFormControl() {
+    return this.firstFormGroup.controls;
   }
-  public previousStep() {
-    this.websiteKonfigurierenStep--;
+
+  onSubmit(formNumber: number) {
+    switch (formNumber) {
+      case 1:
+        this.firstSubmit = true;
+        break;
+      case 2:
+        this.secondSubmit = true;
+        break;
+      case 3:
+        this.thirdSubmit = true;
+        break;
+      case 99:
+        this.lastSubmit = true;
+        break;
+    }
+  }
+  public getAllForms(
+    firstFormGroup: any,
+    secondFormGroup: any,
+    thirdFormGroup: any,
+    stepperReset: any
+  ) {
+    console.log(firstFormGroup);
+    console.log(secondFormGroup);
+    console.log(thirdFormGroup);
+    
+    this.firstSubmit = false;
+
+    this.secondSubmit = false;
+
+    this.thirdSubmit = false;
+
+    this.lastSubmit = false;
+
+    stepperReset.reset()
+    this.websiteKonfigurierenStep = 1;
   }
 }
