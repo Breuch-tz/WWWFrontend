@@ -6,34 +6,22 @@
 @import "~@angular/cdk/overlay-prebuilt.css";
 
 @import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Ovo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 :root {
-  --one: #393e46;
-  --two: #6d9886;
-  --three: #f2e7d5;
-  --four: #f7f7f7;
-  --accent: #c69749;
-
-  --one-opacity: rgb(57, 62, 70, 0.9);
-  --two-opacity: rgb(109, 152, 134, 0.9);
-  --three-opacity: rgb(242, 231, 213, 0.9);
-  --four-opacity: rgb(247, 247, 247, 0.9);
-
-  --one-opacity-X: rgb(57, 62, 70, 0.6);
-  --two-opacity-X: rgb(109, 152, 134, 0.6);
-  --three-opacity-X: rgb(242, 231, 213, 0.6);
-  --four-opacity-X: rgb(247, 247, 247, 0.6);
-
-  --accent-opacity: rgb(198, 151, 73, 0.5);
+  //main colors    main: #12343C   secondary: #F5Bf50
+  --one: rgb(18, 52, 60);
+  --accent: rgb(245, 191, 80);
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   // font-family: "Ovo", serif;
-  font-family: "Ovo", serif;
+  font-family: "League Spartan", sans-serif;
   font-size: 20px;
 }
 body {

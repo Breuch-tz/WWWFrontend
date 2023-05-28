@@ -1,4 +1,4 @@
-<div class="w-full mt-12 flex">
+<div class="w-full my-12 flex">
   <section
     class="w-full text-gray-800 text-center lg:text-left background-radial-gradient"
   >
@@ -18,11 +18,7 @@
           <div
             class="text-center text-white px-6 py-6 md:py-0 md:px-12 max-w-[800px]"
           >
-            <p class="text-lg">
-              Bei uns erhalten Sie eine moderne Website, die Ihr Unternehmen
-              zeitgemäß präsentiert. Vertrauen Sie unserem erfahrenen Team für
-              eine ansprechende Benutzererfahrung.
-            </p>
+            <h1 class="text-4xl font-bold">Über uns</h1>
           </div>
         </div>
       </div>
@@ -30,16 +26,16 @@
   </section>
 </div>
 
-<section class="container mx-auto">
-  <h1
+<mat-divider style="display: flex; margin: auto" class="w-1/2"></mat-divider>
+
+<section class="container mx-auto px-6">
+  <!-- <h1
     class="md:my-12 my-6 text-center notranslate text-4xl md:text-5xl xl:text-6xl tracking-tight"
   >
     Eine Website für Sie
-  </h1>
-  <mat-divider style="display: flex; margin: auto" class="w-1/2"></mat-divider>
+  </h1> -->
   <div class="md:my-12 my-6 flex justify-center">
     <div class="text-center">
-      <!-- <h2 class="text-3xl font-bold mb-6 text-center">Warum WebTree ?</h2> -->
       <p class="text-gray-500">
         Unser Unternehmen steht für lokal verankerten, preiswerten Service mit
         Leidenschaft. Wir sind stolz darauf, Ihnen maßgeschneiderte Lösungen
@@ -53,12 +49,54 @@
 </section>
 
 <mat-divider style="display: flex; margin: auto" class="w-1/2"></mat-divider>
-
+<div class="container mx-auto md:my-12 my-6">
+  <section id="animation" class="animation text-gray-800">
+    <div class="items-left text-left">
+      <div class="animation-blocks flex gap-6 grid grid-cols-1">
+        <div [ngClass]="ngStyle1" id="section1" class="p-4">
+          <p class="text-lg flex items-center mb-1 font-extrabold">2021</p>
+          <p class="text-sm">
+            Unsere Geschäftsidee dreht sich um die Erstellung von Websites für
+            lokale Unternehmer zu günstigen und fairen Preisen. Nachdem wir den
+            ersten Schritt der Umsetzung gemacht haben, präsentieren wir stolz
+            unsere erste Demo. Das Projekt befindet sich im Startloch, und wir
+            haben mit viel Spaß und Herzblut an der Ausarbeitung unseres
+            Konzepts gearbeitet. Unsere Motivation ist es, anderen zu helfen,
+            und wir sind voller Begeisterung für diese Aufgabe.
+          </p>
+        </div>
+        <div [ngClass]="ngStyle2" id="section2" class="p-4">
+          <p class="text-lg flex items-center mb-1 font-extrabold">2022</p>
+          <p class="text-sm">
+            Wir befinden uns mitten in der Website-Erstellung und widmen uns
+            intensiv dem Programmieren, um kontinuierlich unsere Perspektiven zu
+            verbessern. Unser vorrangiges Ziel ist es, den Startschuss zu geben
+            um unseren Kunden ein attraktives Angebot zu präsentieren. Mit
+            Energie und Entschlossenheit treiben wir unsere Projekt voran, um
+            Ihre Vision in die Realität umzusetzen. Mit viel Engagement und
+            Anspruch zum Detail wollen wir den Ansprüchen gerecht werden und
+            treiben den Entwicklungsprozess voran.
+          </p>
+        </div>
+        <div [ngClass]="ngStyle3" id="section3" class="p-4">
+          <p class="text-lg flex items-center mb-1 font-extrabold">Heute</p>
+          <p class="text-sm">
+            Profitieren Sie von unserem preiswerten Service mit einem
+            ausgewogenen Preis-Leistungs-Verhältnis, speziell für lokale Kunden.
+            Vertrauen Sie uns, um qualitativ hochwertige Lösungen zu einem
+            erschwinglichen Preis zu erhalten.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<mat-divider style="display: flex; margin: auto" class="w-1/2"></mat-divider>
 <div class="container md:my-12 my-6 mx-auto">
   <section class="text-gray-800 px-6">
     <div class="flex flex-wrap">
       <div class="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pl-6">
-        <h3 class="text-2xl font-bold mb-6">Trauringe</h3>
+        <h3 class="text-2xl text-center font-bold mb-6">Trauringe</h3>
         <p class="text-gray-500 mb-4">
           Das Eheversprechen ist das schönste Versprechen, das wir einer Person
           geben können und Trauringe sind das Zeugnis dafür. Viele Paare möchten
@@ -70,7 +108,7 @@
       </div>
 
       <div class="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pl-6">
-        <h3 class="text-2xl font-bold mb-6">Trauringe</h3>
+        <h3 class="text-2xl text-center font-bold mb-6">Trauringe</h3>
         <p class="text-gray-500 mb-4">
           Das Eheversprechen ist das schönste Versprechen, das wir einer Person
           geben können und Trauringe sind das Zeugnis dafür. Viele Paare möchten

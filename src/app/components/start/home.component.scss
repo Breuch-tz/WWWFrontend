@@ -25,8 +25,6 @@
   }
 }
 
-
-
 .image-banner:hover {
   .image-banner-btn {
     transition: 0.7s;
@@ -51,11 +49,10 @@
 
 .ngStyleBefore {
   opacity: 0;
-  transform: translate(0px, 20px);
+  transform: translate(0px, 80px);
 }
 
 .ngStyleBeforeSlide {
-  
   opacity: 0;
   transform: translateX(50vw);
 }
@@ -138,4 +135,14 @@ mat-panel-title {
 
 ::ng-deep .mat-horizontal-stepper-header-container {
   display: none !important;
+}
+
+.home-Card-Section {
+  background-color: rgba(251, 251, 251, 0.2);
+}
+
+@media only screen and (min-width: 767px) {
+  .home-Card-Section {
+    background-color: rgba(251, 251, 251, 0.6);
+  }
 }

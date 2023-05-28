@@ -5,39 +5,46 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
-import {
-  FormBuilder,
-  FormGroup,
-  FormControl,
-  NgForm,
-  Validators,
-} from '@angular/forms';
-
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-} from '@angular/animations';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
-  animations: [
-    trigger('inOutAnimation', [
-      transition(':enter', [
-        style({ height: 0, opacity: 0 }),
-        animate('0.5s ease-out', style({ height: 25, opacity: 1 })),
-      ]),
-      transition(':leave', [
-        style({ height: 25, opacity: 1 }),
-        animate('0.5s ease-in', style({ height: 0, opacity: 0 })),
-      ]),
-    ]),
-  ],
 })
 export class AboutComponent {
- 
+  public ngStyle1: String = 'ngStyleBefore';
+  public ngStyle2: String = 'ngStyleBefore';
+  public ngStyle3: String = 'ngStyleBefore';
+
+  constructor(private elementRef: ElementRef) {}
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(event: any) {
+    this.checkElementViewportAnimation();
+  }
+
+  private async checkElementViewportAnimation() {
+    const myElement = this.elementRef.nativeElement.querySelector('#animation');
+
+    const bounding = myElement.getBoundingClientRect();
+
+    if (bounding.top <= 700 && bounding.left >= 0) {
+      this.ngStyle1 = 'ngStyleAfter';
+      await this.delay(450);
+      this.ngStyle2 = 'ngStyleAfter';
+      await this.delay(450);
+      this.ngStyle3 = 'ngStyleAfter';
+      await this.delay(450);
+    } else {
+      this.ngStyle1 = 'ngStyleBefore';
+      await this.delay(450);
+      this.ngStyle2 = 'ngStyleBefore';
+      await this.delay(450);
+      this.ngStyle3 = 'ngStyleBefore';
+      await this.delay(450);
+    }
+  }
+  private async delay(ms: number) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
 }
