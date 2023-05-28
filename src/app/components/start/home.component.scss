@@ -25,17 +25,13 @@
   }
 }
 
-.image-banner {
-  transition: 1s;
-  p {
-    transition: 1s;
-  }
-}
+
+
 .image-banner:hover {
   .image-banner-btn {
-    transition: 0.3s;
+    transition: 0.7s;
     border: solid 1px orange;
-    font-size: 115%;
+    padding: 20px;
     backface-visibility: hidden;
   }
 }
@@ -43,7 +39,7 @@
 .image-banner-btn {
   backface-visibility: hidden;
   background-color: rgb(247, 247, 247, 0.8);
-  transition: 0.3s;
+  transition: 0.7s;
 }
 
 //In Jedem Paket area start
@@ -56,6 +52,12 @@
 .ngStyleBefore {
   opacity: 0;
   transform: translate(0px, 20px);
+}
+
+.ngStyleBeforeSlide {
+  
+  opacity: 0;
+  transform: translateX(50vw);
 }
 
 //In Jedem Paket area end
@@ -83,9 +85,10 @@
     }
   }
 }
-
+::ng-deep mat-expansion-panel {
+  padding: 5px !important;
+}
 mat-expansion-panel-header {
-  padding: 0;
   ::ng-deep .mat-content-hide-toggle {
     margin: 0 !important;
     padding: 15px !important;
@@ -104,7 +107,7 @@ mat-panel-title {
 
 //Priceblock area start
 .pricing-block {
-  transition: 1s;
+  transition: 0.5s;
   outline: 1px solid rgb(198, 151, 73, 0);
   button {
     background-color: hsl(0, 0%, 95%);
@@ -114,7 +117,7 @@ mat-panel-title {
 @media only screen and (min-width: 1024px) {
   .pricing-block:hover {
     transform: translateY(-2%);
-    transition: 1s;
+    transition: 0.5s;
     opacity: 1;
     outline: 1px solid rgb(198, 151, 73, 0.6);
     .pricing-border {
@@ -132,3 +135,7 @@ mat-panel-title {
   color: rgb(1, 168, 1);
 }
 //Priceblock area end
+
+::ng-deep .mat-horizontal-stepper-header-container {
+  display: none !important;
+}
