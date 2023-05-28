@@ -7,15 +7,17 @@ import { Meta } from '@angular/platform-browser';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  title = 'WebTree';
   public SidenavToggleStatus: boolean = true;
   public Mobilesize: boolean = true;
 
-  public ScreenWidth!: Number;
+  public ScreenWidth!: number;
 
   constructor(public meta: Meta) {
-    this.onResize();
+    this.onResize();    
   }
   ngOnInit() {
+    
     this.meta.addTags([
       {
         name: 'description',
@@ -35,10 +37,10 @@ export class AppComponent {
   @HostListener('window:resize', ['$event'])
   public onResize(event?: undefined) {
     this.ScreenWidth = window.innerWidth;
-    if (this.ScreenWidth <= 767) {
+    if (this.ScreenWidth <= 1030) {
       this.Mobilesize = false;
     }
-    if (this.ScreenWidth > 767) {
+    if (this.ScreenWidth > 1030) {
       this.Mobilesize = true;
     }
   }

@@ -1,229 +1,123 @@
-<div class="title mt-10 text-center pt-24 pb-10 px-6">
-  <p class="text-5xl md:text-6xl xl:text-7xl tracking-tight"></p>
-</div>
-<div class="mt-3 mb-3 text-center pt-3 pb-3 px-6">
-  <h1 class="text-5xl md:text-6xl xl:text-7xl tracking-tight">
-    <p class="text-4xl md:text-5xl xl:text-6xl tracking-tight">Über uns</p>
-    <span class="text-4xl md:text-5xl xl:text-6xl tracking-tight title-heading"
-      >Seit 1993</span
+<div class="w-full my-12 flex">
+  <section
+    class="w-full text-gray-800 text-center lg:text-left background-radial-gradient"
+  >
+    <div
+      class="relative overflow-hidden bg-no-repeat bg-cover"
+      style="
+        background-position: 50%;
+        background-image: url('https://mdbootstrap.com/img/new/standard/nature/071.jpg');
+        height: 500px;
+      "
     >
-  </h1>
-</div>
-
-<div class="contentblock-one container mt-6 mb-8 px-6 mx-auto">
-  <section class="text-gray-800 text-center">
-    <div class="flex flex-wrap">
-      <p>
-        Seit 1993 ist Juwelier Breuch Ihr zuverlässiger Ansprechpartner, der Sie
-        mit erstklassiger Beratung und fairen Preisen unterstützt
-        <br />
-        <br />
-        Im Jahr 2002 haben wir unsere neuen Räumlichkeiten in Greven bezogen,
-        aber unsere Hingabe zur Kundenzufriedenheit bleibt unverändert. Wir sind
-        ein Familienbetrieb und agieren mit Herz und Verstand, seit unserer
-        Gründung bis heute.
-        <br />
-        <br />
-        Sollten Sie weitere Fragen haben, können Sie uns gerne kontaktieren!
-      </p>
+      <div
+        class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+        style="background-color: rgba(0, 0, 0, 0.75)"
+      >
+        <div class="flex justify-center items-center h-full">
+          <div
+            class="text-center text-white px-6 py-6 md:py-0 md:px-12 max-w-[800px]"
+          >
+            <h1 class="text-4xl font-bold">Über uns</h1>
+          </div>
+        </div>
+      </div>
     </div>
-    <br />
-    <br />
-    <mat-icon class="arrow-down">arrow_downward</mat-icon>
   </section>
 </div>
 
-<div class="text-center image-section container mb-8 my-12 mt-0 px-6 mx-auto">
-  <section class="text-gray-800">
-    <div class="text-center">
-      <h1 class="mb-0 text-2xl font-bold sm:text-3xl">Über unsere Arbeit</h1>
-    </div>
+<mat-divider style="display: flex; margin: auto" class="w-1/2"></mat-divider>
 
-    <div id="goldschmiede" class="pt-20 flex flex-wrap">
-      <div
-        class="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pr-6 lg:mb-0 mb-6"
-      >
-        <div
-          class="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
-          style="background-position: 50%"
-          data-mdb-ripple="true"
-          data-mdb-ripple-color="light"
-        >
-          <img
-            src="../../../assets/about/goldschmied.jpg"
-            class="w-full"
-            alt="Goldschmiede"
-          />
-          <a>
-            <div
-              class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-              style="background-color: rgba(251, 251, 251, 0.2)"
-            ></div>
-          </a>
+<section class="container mx-auto px-6">
+  <!-- <h1
+    class="md:my-12 my-6 text-center notranslate text-4xl md:text-5xl xl:text-6xl tracking-tight"
+  >
+    Eine Website für Sie
+  </h1> -->
+  <div class="md:my-12 my-6 flex justify-center">
+    <div class="text-center">
+      <p class="text-gray-500">
+        Unser Unternehmen steht für lokal verankerten, preiswerten Service mit
+        Leidenschaft. Wir sind stolz darauf, Ihnen maßgeschneiderte Lösungen
+        anzubieten, die Ihre Bedürfnisse erfüllen und Ihr Unternehmen
+        erfolgreich machen. Vertrauen Sie auf unser engagiertes Team, das mit
+        Hingabe und Fachkenntnis arbeitet, um Ihnen den bestmöglichen Service zu
+        bieten.
+      </p>
+    </div>
+  </div>
+</section>
+
+<mat-divider style="display: flex; margin: auto" class="w-1/2"></mat-divider>
+<div class="container mx-auto md:my-12 my-6">
+  <section id="animation" class="animation text-gray-800">
+    <div class="items-left text-left">
+      <div class="animation-blocks flex gap-6 grid grid-cols-1">
+        <div [ngClass]="ngStyle1" id="section1" class="p-4">
+          <p class="text-lg flex items-center mb-1 font-extrabold">2021</p>
+          <p class="text-sm">
+            Unsere Geschäftsidee dreht sich um die Erstellung von Websites für
+            lokale Unternehmer zu günstigen und fairen Preisen. Nachdem wir den
+            ersten Schritt der Umsetzung gemacht haben, präsentieren wir stolz
+            unsere erste Demo. Das Projekt befindet sich im Startloch, und wir
+            haben mit viel Spaß und Herzblut an der Ausarbeitung unseres
+            Konzepts gearbeitet. Unsere Motivation ist es, anderen zu helfen,
+            und wir sind voller Begeisterung für diese Aufgabe.
+          </p>
         </div>
+        <div [ngClass]="ngStyle2" id="section2" class="p-4">
+          <p class="text-lg flex items-center mb-1 font-extrabold">2022</p>
+          <p class="text-sm">
+            Wir befinden uns mitten in der Website-Erstellung und widmen uns
+            intensiv dem Programmieren, um kontinuierlich unsere Perspektiven zu
+            verbessern. Unser vorrangiges Ziel ist es, den Startschuss zu geben
+            um unseren Kunden ein attraktives Angebot zu präsentieren. Mit
+            Energie und Entschlossenheit treiben wir unsere Projekt voran, um
+            Ihre Vision in die Realität umzusetzen. Mit viel Engagement und
+            Anspruch zum Detail wollen wir den Ansprüchen gerecht werden und
+            treiben den Entwicklungsprozess voran.
+          </p>
+        </div>
+        <div [ngClass]="ngStyle3" id="section3" class="p-4">
+          <p class="text-lg flex items-center mb-1 font-extrabold">Heute</p>
+          <p class="text-sm">
+            Profitieren Sie von unserem preiswerten Service mit einem
+            ausgewogenen Preis-Leistungs-Verhältnis, speziell für lokale Kunden.
+            Vertrauen Sie uns, um qualitativ hochwertige Lösungen zu einem
+            erschwinglichen Preis zu erhalten.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<mat-divider style="display: flex; margin: auto" class="w-1/2"></mat-divider>
+<div class="container md:my-12 my-6 mx-auto">
+  <section class="text-gray-800 px-6">
+    <div class="flex flex-wrap">
+      <div class="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pl-6">
+        <h3 class="text-2xl text-center font-bold mb-6">Trauringe</h3>
+        <p class="text-gray-500 mb-4">
+          Das Eheversprechen ist das schönste Versprechen, das wir einer Person
+          geben können und Trauringe sind das Zeugnis dafür. Viele Paare möchten
+          daher ganz besondere Ringe haben, die ihre Liebe widerspiegeln. Bei
+          uns finden Sie genau solche Eheringe. Wir präsentieren Ihnen gerne
+          unser breites Sortiment an Trauringen von beliebten und bewährten
+          Marken wie Kühnel, Gerstner oder Wörner.
+        </p>
       </div>
 
       <div class="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pl-6">
-        <h3 class="text-2xl font-bold mb-4">Goldschmiede</h3>
+        <h3 class="text-2xl text-center font-bold mb-6">Trauringe</h3>
         <p class="text-gray-500 mb-4">
-          Mit jahrzehntelanger Erfahrung und Leidenschaft für das Handwerk,
-          fertigen wir exquisite Schmuckstücke aus edlen Metallen an. Trauringe
-          und Schmuckstücke die mit Präzision und Liebe zum Detail gefertigt
-          werden.
-          <br />
-          <br />
-          Dabei legt unsere Goldschmiede großen Wert auf die Verwendung von
-          fairtrade gewonnenen Materialien und setzt auf eine umweltfreundliche
-          Herstellung.
-          <br />
-          <br />
-          Wenn Sie auf der Suche nach einem einzigartigen Schmuckstück sind, das
-          Ihre Persönlichkeit und Ihren Stil zum Ausdruck bringt, sind Sie bei
-          Puls der Zeit genau richtig.
-        </p>
-        <p
-          style="cursor: pointer"
-          class="mehrErfahrenTextTrauringe text-blue-400 hover:text-blue-600"
-          routerLink="/products"
-          fragment="trauringe"
-        >
-          Mehr über Trauringe >
+          Das Eheversprechen ist das schönste Versprechen, das wir einer Person
+          geben können und Trauringe sind das Zeugnis dafür. Viele Paare möchten
+          daher ganz besondere Ringe haben, die ihre Liebe widerspiegeln. Bei
+          uns finden Sie genau solche Eheringe. Wir präsentieren Ihnen gerne
+          unser breites Sortiment an Trauringen von beliebten und bewährten
+          Marken wie Kühnel, Gerstner oder Wörner.
         </p>
       </div>
-      <div>
-        <p class="font-bold text-black-800 mt-8">
-          Trauringe, Schmuck & Sonderanfertigungen
-        </p>
-      </div>
-    </div>
-
-    <div id="uhrmachermeister" class="pt-20 flex flex-wrap lg:flex-row-reverse">
-      <div
-        class="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pl-6 lg:mb-0 mb-6"
-      >
-        <div
-          class="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
-          style="background-position: 50%"
-          data-mdb-ripple="true"
-          data-mdb-ripple-color="light"
-        >
-          <img
-            src="../../../assets/about/clock.jpg"
-            class="w-full"
-            alt="Uhrmacher"
-          />
-          <a>
-            <div
-              class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-              style="background-color: rgba(251, 251, 251, 0.2)"
-            ></div>
-          </a>
-        </div>
-      </div>
-
-      <div class="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pr-6">
-        <h3 class="text-2xl font-bold mb-4">Uhrmachermeister-Werkstatt</h3>
-        <p class="text-gray-500 mb-4">
-          Unsere Leidenschaft für Tradition spiegelt sich in unserer hauseigenen
-          Uhrmachermeisterwerkstatt wider. Dort widmen wir uns mit Hingabe und
-          Begeisterung dem filigranen Handwerk der Uhrmacherkunst und kümmern
-          uns um hochwertige sowie antike Uhren.
-          <br />
-          <br />
-          Jede Uhr stellt eine besondere Herausforderung dar, da die Technik
-          hinter dem Ziffernblatt von Modell zu Modell unterschiedlich sein
-          kann. Wir nehmen uns die Zeit, Ihre individuellen Bedürfnisse zu
-          berücksichtigen und restaurieren Ihre alte Uhr sorgfältig, damit Sie
-          bald wieder die genaue Zeit ablesen können. <br />
-          <br />
-          Wie können wir Ihnen helfen? Kommen Sie zu uns und lernen Sie Ihren
-          Juwelier und Uhrmacher in Greven kennen!
-        </p>
-
-        <p
-          style="cursor: pointer"
-          class="mehrErfahrenTextUhren text-blue-400 hover:text-blue-600"
-          routerLink="/products"
-          fragment="uhren"
-        >
-          Mehr über Uhren >
-        </p>
-      </div>
-      <div>
-        <p class="font-bold text-black-800 mt-8">
-          Großuhren, Armbanduhren, Antike- oder Luxusuhren
-        </p>
-      </div>
-    </div>
-  </section>
-</div>
-
-<div class="container mb-8 my-12 mt-0 px-6 mx-auto">
-  <section class="mb-16 text-gray-800 text-center">
-    <h2 class="text-3xl font-bold mb-12">Ihr Familien Unternehmen</h2>
-
-    <div class="grid md:grid-cols-2 gap-x-3 lg:gap-x-2">
-      <div class="mb-12 md:mb-0">
-        <div class="flex justify-center mb-6">
-          <img
-            src="../../../assets/about/profil.png"
-            class="rounded-full shadow-lg w-32"
-            alt="Inhaberin"
-          />
-        </div>
-        <h5 class="text-lg font-bold mb-4">Elke Breuch</h5>
-        <h6 class="font-medium text-blue-600 mb-4">Inhaberin</h6>
-      </div>
-      <div class="mb-0">
-        <div class="flex justify-center mb-6">
-          <img
-            src="../../../assets/about/profil.png"
-            class="rounded-full shadow-lg w-32"
-            alt="Uhrmacher"
-          />
-        </div>
-        <h5 class="text-lg font-bold mb-4">Martin Breuch</h5>
-        <h6 class="font-medium text-blue-600 mb-4">
-          Uhrmachermeister & Trauringberater
-        </h6>
-      </div>
-    </div>
-
-    <div class="mt-12 flex text-gray-500 flex-wrap">
-      <p>
-        Seit vielen Jahren steht unser Name in Greven und der Region für eine
-        professionelle Beratung und einen erfahrenen Service. Unsere Spezialität
-        ist die Reparatur und Überholung von Uhren aller Marken wie Breitling,
-        Rolex, Omega, Rado, Ebel usw. in unserer eigenen Meisterwerkstatt. Wir
-        würden uns freuen, auch Ihr wertvolles Schmuckstück begutachten zu
-        dürfen.
-        <br />
-        <br />
-        Uhrmacher in Greven, Uhren in Greven, Ohrlöcher schießen, Juwelier in
-        Greven, Juwlier in der nähe
-      </p>
-    </div>
-  </section>
-</div>
-
-<div class="my-12 px-6 mx-auto">
-  <section class="text-gray-800 text-center">
-    <h2 class="text-3xl font-bold mb-12">Einblick in die Goldschmiede</h2>
-    <div
-      class="relative overflow-hidden bg-no-repeat ripple"
-      style="background-position: 50%"
-      data-mdb-ripple="true"
-      data-mdb-ripple-color="light"
-    >
-      <video
-        volume="50"
-        style="border-radius: 20px"
-        class="mb-0 mx-auto"
-        controls
-        type="video/mp4"
-        src="../../../assets/about/Trauring aus Silber_Trim.mp4"
-        alt="trauringe recyceln, fairtrade"
-      ></video>
     </div>
   </section>
 </div>

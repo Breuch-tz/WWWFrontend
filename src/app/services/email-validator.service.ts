@@ -88,17 +88,14 @@ export class EmailValidatorService {
     ) {
       //keinerror
       this.validateFormError = 'validateStyleFormError';
-      
-     
+
       return true;
     }
     //error
     this.validateFormError = '';
-    setTimeout(()=> {
+    setTimeout(() => {
       this.validateFormError = 'validateStyleFormError';
     }, 6000);
     return false;
   }
-
- 
 }

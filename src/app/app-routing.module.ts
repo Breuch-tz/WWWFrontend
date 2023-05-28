@@ -1,22 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './components/start/home.component';
+import { ProductComponent } from './components/preise/product.component';
 import { AboutComponent } from './components/about/about.component';
+import { ReferenzenComponent } from './components/referenzen/referenzen.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { ProductComponent } from './components/product/product.component';
-
 import { ImpressumComponent } from './components/impressum/impressum.component';
 import { DatenschutzComponent } from './components/datenschutz/datenschutz.component';
+import { TestComponent } from './components/test/test.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'products', component: ProductComponent },
+  { path: '', redirectTo: '/start', pathMatch: 'full' },
+  { path: 'start', component: HomeComponent },
+  { path: 'preise', component: ProductComponent },
+  { path: 'ueber-uns', component: AboutComponent },
+  { path: 'referenzen', component: ReferenzenComponent },
+  { path: 'kontakt', component: ContactComponent },
   { path: 'impressum', component: ImpressumComponent },
   { path: 'datenschutzerklaerung', component: DatenschutzComponent },
+  { path: 'test', component: TestComponent },
 ];
 
 @NgModule({

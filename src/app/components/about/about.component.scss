@@ -1,17 +1,36 @@
-.title-heading {
-  border-top: 1px solid black;
-}
-
-@media only screen and (max-width: 576px) {
-  .title-heading {
-    border-top: none;
+.animation-blocks {
+  div {
+    transition: 0.3s;
+    border-radius: 0.5rem;
+    border-radius: 10px;
+  }
+  div:hover {
+    transition: 0.3s;
+    transform: translateY(-2%);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+  span {
+    font-size: 45px;
   }
 }
 
-.title {
-  height: 250px;
-  background-image: url(./../../../assets/about/Laden02.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 100% 31%;
+.animation {
+  div {
+    div {
+      div {
+        transition: 0.8s;
+      }
+    }
+  }
+}
+
+.ngStyleAfter {
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+
+.ngStyleBefore {
+  opacity: 0;
+  transform: translate(0px, 80px);
 }
