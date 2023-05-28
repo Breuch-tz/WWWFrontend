@@ -105,8 +105,10 @@
   }
 }
 
+::ng-deep mat-expansion-panel {
+  padding: 5px !important;
+}
 mat-expansion-panel-header {
-  padding: 0;
   ::ng-deep .mat-content-hide-toggle {
     margin: 0 !important;
     padding: 15px !important;

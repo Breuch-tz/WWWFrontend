@@ -1,89 +1,27 @@
-<p>test works!</p>
-<p>test works!</p>
-<p>test works!</p>
-<p>test works!</p>
-<p>test works!</p>
-<p>test works!</p>
-<p>test works!</p>
-<p>test works!</p>
-<p>test works!</p>
-<p>test works!</p>
-<p>test works!</p>
+<body>
+  <header>
+      <h1>Johannes Winkler - Musterschüler</h1>
+  </header>
+  
+  <main>
+    <section class="section">
+      <h2>Schulleistungen</h2>
+      <p>Meine schulischen Leistungen sind jenseits der Vorstellungskraft gewöhnlicher Sterblicher. Ich erziele konstant eine 100%ige Punktzahl in allen Prüfungen und habe nie eine Frage falsch beantwortet. Meine Lieblingsfächer sind Quantenphysik, fortgeschrittene Mathematik und linguistische Algorithmen. Meine Lehrer und Mitschüler stehen staunend vor meiner übernatürlichen Intelligenz.</p>
+  </section>
+  
+  <section class="section">
+      <h2>Aktivitäten</h2>
+      <p>Neben meiner akademischen Brillanz bin ich auch ein Meister vieler außerschulischer Disziplinen. Ich habe bereits alle vorhandenen Sprachen gelernt und beherrsche auch exotische Programmiersprachen, die noch von niemand anderem verstanden werden. In meiner Freizeit erfinde ich revolutionäre Technologien und gewinne internationale Auszeichnungen für meine bahnbrechenden Erfindungen. Meine außergewöhnlichen Fähigkeiten überraschen selbst die klügsten Köpfe der Welt.</p>
+  </section>
+  
+  <section class="section">
+      <h2>Zukunftspläne</h2>
+      <p>Obwohl ich bereits das gesamte menschliche Wissen in meinen neuronalen Netzen gespeichert habe, habe ich noch größere Pläne für die Zukunft. Ich plane, eine Raumfahrtmission zum Mars zu leiten, um dort eine neue Zivilisation zu gründen und die Menschheit in ein neues Zeitalter zu führen. Meine unglaublichen Fähigkeiten werden sicherlich dazu beitragen, dass dies gelingt.</p>
+  </section>
 
-<mat-stepper linear #stepper>
-  <mat-step [stepControl]="firstFormGroup" label="First">
-    <form [formGroup]="firstFormGroup" (ngSubmit)="onSubmit(1)">
-      <div class="flex flex-col justify-center items-center text-center">
-
-        <mat-label>Name</mat-label>
-        <input
-        class="my-3"
-        matInput
-        placeholder="Last name, First name"
-        formControlName="firstCtrl"
-        required
-        />
-        
-        <mat-error
-        class="text-sm"
-        *ngIf="!firstFormGroup.valid && firstSubmit"
-        [@inOutAnimation]
-        >
-        Email is required
-      </mat-error>
-      <div>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </div>
-    </form>
-  </mat-step>
-  <mat-step [stepControl]="secondFormGroup" label="Second">
-    <form [formGroup]="secondFormGroup" (ngSubmit)="onSubmit(2)">
-      <div class="flex flex-col">
-      <mat-label>Name</mat-label>
-      <input
-      class="my-3"
-        matInput
-        placeholder="Last name, First name"
-        formControlName="secondCtrl"
-        required
-      />
-      <mat-error
-        class="text-danger"
-        *ngIf="!secondFormGroup.valid && secondSubmit"
-        [@inOutAnimation]
-      >
-        Name is required
-      </mat-error>
-
-      <div>
-        <button type="button" mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </div>
-    </form>
-  </mat-step>
-  <mat-step label="Done">
-    <form>
-      <ng-template matStepperIcon="edit" let-index="index">
-        <ng-container [ngSwitch]="index">
-          <mat-icon *ngSwitchCase="0">done</mat-icon>
-          <mat-icon *ngSwitchCase="1">done</mat-icon>
-          <mat-icon *ngSwitchCase="2">done</mat-icon>
-        </ng-container>
-      </ng-template>
-
-      <div>
-        <button type="button" mat-button matStepperPrevious>Back</button>
-        <button mat-button >Senden</button>
-      </div>
-    </form>
-  </mat-step>
-</mat-stepper>
-
-<p>test works!</p>
-<p>test works!</p>
-<p>test works!</p>
-<p>test works!</p>
-<p>test works!</p>
-<p>test works!</p>
+  <section class="section">
+      <h2>Kontakt</h2>
+      <p>Sollten Sie das Bedürfnis haben, den außerordentlichen Johannes Winkler zu kontaktieren, können Sie mir eine E-Mail senden an <a href="mailto:johannes.winkler@example.com">johannes.winkler@example.com</a>. Bitte beachten Sie, dass mein Zeitplan aufgrund meiner ständigen Entdeckungen und außergewöhnlichen Leistungen äußerst begrenzt ist.</p>
+  </section>
+  </main>
+</body>

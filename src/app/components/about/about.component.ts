@@ -1,59 +1,43 @@
-import { Component } from '@angular/core';
-import { GalleryItem, ImageItem } from 'ng-gallery';
-import { ElementRef, HostListener, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
+import {
+  FormBuilder,
+  FormGroup,
+  FormControl,
+  NgForm,
+  Validators,
+} from '@angular/forms';
+
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+} from '@angular/animations';
+
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
+  animations: [
+    trigger('inOutAnimation', [
+      transition(':enter', [
+        style({ height: 0, opacity: 0 }),
+        animate('0.5s ease-out', style({ height: 25, opacity: 1 })),
+      ]),
+      transition(':leave', [
+        style({ height: 25, opacity: 1 }),
+        animate('0.5s ease-in', style({ height: 0, opacity: 0 })),
+      ]),
+    ]),
+  ],
 })
 export class AboutComponent {
-  public ngStyle1: String = 'ngStyleBefore';
-  public ngStyle2: String = 'ngStyleBefore';
-  public ngStyle3: String = 'ngStyleBefore';
-  public ngStyle4: String = 'ngStyleBefore';
-  public ngStyle5: String = 'ngStyleBefore';
-  public ngStyle6: String = 'ngStyleBefore';
-
-  constructor(private elementRef: ElementRef) {}
-
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll(event: any) {
-    this.checkElementViewport();
-  }
-  private async checkElementViewport() {
-    const myElementAnimation =
-      this.elementRef.nativeElement.querySelector('#animation');
-
-    const bounding = myElementAnimation.getBoundingClientRect();
-
-    if (bounding.top <= 500 && bounding.left >= 0) {
-      this.ngStyle1 = 'ngStyleAfter';
-      await this.delay(300);
-      this.ngStyle2 = 'ngStyleAfter';
-      await this.delay(300);
-      this.ngStyle3 = 'ngStyleAfter';
-      await this.delay(300);
-      this.ngStyle4 = 'ngStyleAfter';
-      await this.delay(300);
-      this.ngStyle5 = 'ngStyleAfter';
-      await this.delay(300);
-      this.ngStyle6 = 'ngStyleAfter';
-    } else {
-      this.ngStyle1 = 'ngStyleBefore';
-      await this.delay(300);
-      this.ngStyle2 = 'ngStyleBefore';
-      await this.delay(300);
-      this.ngStyle3 = 'ngStyleBefore';
-      await this.delay(300);
-      this.ngStyle4 = 'ngStyleBefore';
-      await this.delay(300);
-      this.ngStyle5 = 'ngStyleBefore';
-      await this.delay(300);
-      this.ngStyle6 = 'ngStyleBefore';
-    }
-  }
-
-  private async delay(ms: number) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
+ 
 }

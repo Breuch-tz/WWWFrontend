@@ -42,6 +42,7 @@ export class HomeComponent {
   public ngStyle1: String = 'ngStyleBefore';
   public ngStyle2: String = 'ngStyleBefore';
   public ngStyle3: String = 'ngStyleBefore';
+  public priceButton: String = 'ngStyleBeforeSlide';
 
   public websiteKonfigurierenStep: number = 1;
   public websiteKonfigurierenStepMax: number = 4;
@@ -60,7 +61,8 @@ export class HomeComponent {
   @ViewChild('individualForm') individualForm!: NgForm;
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: any) {
-    this.checkElementViewport();
+    this.checkElementViewportAnimation();
+    this.checkElementViewportPriceButton();
   }
 
   ngOnInit() {
@@ -78,7 +80,20 @@ export class HomeComponent {
     });
   }
 
-  private async checkElementViewport() {
+  private async checkElementViewportPriceButton() {
+    const myElement =
+      this.elementRef.nativeElement.querySelector('#priceButtonAnimation');
+
+    const bounding = myElement.getBoundingClientRect();
+
+    if (bounding.top <= 600 && bounding.left >= 0) {
+      this.priceButton = 'ngStyleAfter';
+    } else {
+      this.priceButton = 'ngStyleBeforeSlide';
+    }
+  }
+
+  private async checkElementViewportAnimation() {
     const myElement = this.elementRef.nativeElement.querySelector('#animation');
 
     const bounding = myElement.getBoundingClientRect();
@@ -99,6 +114,7 @@ export class HomeComponent {
       await this.delay(300);
     }
   }
+
   private async delay(ms: number) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
@@ -151,7 +167,7 @@ export class HomeComponent {
     console.log(firstFormGroup);
     console.log(secondFormGroup);
     console.log(thirdFormGroup);
-    
+
     this.firstSubmit = false;
 
     this.secondSubmit = false;
@@ -160,7 +176,7 @@ export class HomeComponent {
 
     this.lastSubmit = false;
 
-    stepperReset.reset()
+    stepperReset.reset();
     this.websiteKonfigurierenStep = 1;
   }
 }
