@@ -79,7 +79,6 @@ export class HomeComponent {
 
   public isRequired(controlName: string): boolean {
     const control = this.form.get(controlName);
-    console.log(control ? control.hasError('required') : false);
 
     return control ? control.hasError('required') : false;
   }
